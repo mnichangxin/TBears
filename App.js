@@ -8,12 +8,14 @@
 
 import React from 'react';
 import {SafeAreaView} from 'react-native';
-import Index from './views/index/index';
+// import Index from './views/index/index';
+import Main from '@views/main/index'
 
 const App: () => React$Node = () => {
   return (
     <SafeAreaView>
-      <Index />
+      {/* <Index /> */}
+      <Main />
     </SafeAreaView>
   );
 };
