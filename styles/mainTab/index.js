@@ -14,6 +14,8 @@ export default StyleSheet.create({
     tabBar: {
         flexDirection: 'row',
         height: 40,
+        paddingLeft: 25,
+        paddingRight: 25,
         borderTopWidth: .5,
         borderTopColor: '#eaeaea'
     },
