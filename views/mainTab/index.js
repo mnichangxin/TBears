@@ -1,38 +1,67 @@
-// import React from 'react'
-// import { View, Text } from 'react-native'
-import { createAppContainer } from 'react-navigation'
-import { createBottomTabNavigator } from 'react-navigation-tabs'
-import Home from '@views/home/index'
-import Meet from '@views/meet/index'
-import Notice from '@views/notice/index'
-import Mine from '@views/mine/index'
-// import styles from '@styles/mainTab'
+import React from 'react'
+import { View, SafeAreaView, Text, Image, TouchableOpacity } from 'react-native'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import * as actions from '@actions/index.js'
+import tabNavigatorConfig from '@router/tabNavigatorConfig'
+import styles from '@styles/mainTab'
 
-
-// export default () => (
-//     <View style={styles.root}>
-//         <View style={styles.tabContent}></View>
-//         <View style={styles.tabBar}>
-//             <View style={styles.tabBarItemWrapper}>
-//                 <Text>首页</Text>
-//                 <Text>擦肩</Text>
-//             </View>
-//             <View style={styles.tabBarItemWrapper}></View>
-//             <View style={styles.tabBarItemWrapper}>
-//                 <Text>消息</Text>
-//                 <Text>我的</Text>
-//             </View>
-//         </View>
-//     </View>
-// )
-
-const TabNavigator = createBottomTabNavigator({
-    Home: Home,
-    Meet: Meet,
-    Notice: Notice,
-    Mine: Mine
-}, {
-    headerMode: 'none'
+const mapStateToProps = state => ({
+    current_tab: state.current_tab
 })
+const mapDispatchToProps = dispatch => ({ actions: bindActionCreators(actions, dispatch) })
 
-export default createAppContainer(TabNavigator)
+export default connect(mapStateToProps, mapDispatchToProps)(props => {
+    const onTabItemPress = tabItem => () => {
+        props.actions.switch_tab(tabItem.name)
+    }
+    const CurrentTabScreen = () => {
+        for (let i = 0, len = tabNavigatorConfig.length; i < len; i++) {
+            if (tabNavigatorConfig[i].name === props.current_tab) {
+                return tabNavigatorConfig[i].screen()
+            }
+        }
+        return null
+    }
+    return (
+        <View style={styles.rootWrapper}>
+            <SafeAreaView>
+                <View style={styles.root}>
+                    <View style={styles.tabScreen}>
+                       <CurrentTabScreen />
+                    </View>
+                    <View style={styles.tabBar}>
+                        {
+                            tabNavigatorConfig.map(tabItem => (
+                                tabItem.name !== 'Publish'
+                                ?
+                                <TouchableOpacity 
+                                    activeOpacity={1}
+                                    style={styles.tabBarItem}
+                                    key={tabItem.name}
+                                    onPress={onTabItemPress(tabItem)}>
+                                    <Image 
+                                        source={{ uri: props.current_tab === tabItem.name ? tabItem.iconActiveUri : tabItem.iconInactiveUri }}
+                                        style={styles.tabBarItemIcon} />
+                                    <Text 
+                                        style={[styles.tabBarItemLabel, 
+                                        props.current_tab === tabItem.name && styles.tabBarItemLabelActive]}>
+                                        { tabItem.label }
+                                    </Text>
+                                </TouchableOpacity>
+                                :
+                                <TouchableOpacity 
+                                    style={[styles.tabBarItem, styles.tabBarItemPublish]}
+                                    key={tabItem.name}>
+                                    <Image 
+                                        source={{ uri: tabItem.iconInactiveUri }}
+                                        style={styles.tabBarItemIconPublish} />
+                                </TouchableOpacity>
+                            ))
+                        }
+                    </View>
+                </View>
+            </SafeAreaView>
+        </View>
+    )
+})

@@ -1,11 +1,11 @@
-import MainTab from '@views/mainTab/index'
-import Login from '@views/login/index'
+import MainTabScreen from '@views/mainTab/index'
+import LoginScreen from '@views/login/index'
 
 export default {
     MainTab: {
-        screen: MainTab
+        screen: MainTabScreen
     },
     Login: {
-        screen: Login
+        screen: LoginScreen
     }
 }
