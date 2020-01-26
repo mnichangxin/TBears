@@ -1,15 +1,19 @@
 {
-  "presets": ["module:metro-react-native-babel-preset"],
-  "plugins": [
-    ["module-resolver", {
-      "root": ["./"],
-      "alias": {
-         "@": "./",
-         "@views": "./views",
-         "@styles": "./styles",
-         "@utils": "./utils",
-         "@router": "./router"
-      }
-    }]
-  ]
+    "presets": ["module:metro-react-native-babel-preset"],
+    "plugins": [
+        ["module-resolver", {
+            "root": ["./"],
+            "alias": {
+                "@": "./",
+                "@views": "./views",
+                "@styles": "./styles",
+                "@utils": "./utils",
+                "@router": "./router",
+                "@store": "./store",
+                "@actions": "./actions",
+                "@reducer": "./reducer",
+                "@constants": "./constants"
+            }
+        }]
+    ]
 }
