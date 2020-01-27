@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import { scaleSize, scaleFont } from '@utils/scaleUtil'
 
 export default StyleSheet.create({
     rootWrapper: {
@@ -15,9 +16,9 @@ export default StyleSheet.create({
     },
     tabBar: {
         flexDirection: 'row',
-        height: 70.5,
-        paddingLeft: 25,
-        paddingRight: 25,
+        height: scaleSize(141),
+        paddingLeft: scaleSize(50),
+        paddingRight: scaleSize(50),
         borderTopWidth: 1,
         borderTopColor: '#f2f2f2'
     },
@@ -27,15 +28,15 @@ export default StyleSheet.create({
         justifyContent: 'center'
     },
     tabBarItemPublish: {
-        width: 85
+        width: scaleSize(170)
     },
     tabBarItemIcon: {
-        width: 29,
-        height: 29
+        width: scaleSize(58),
+        height: scaleSize(58)
     },
     tabBarItemLabel: {
-        marginTop: 4.5,
-        fontSize: 16.5,
+        marginTop: scaleSize(9),
+        fontSize: scaleFont(16.5),
         color: '#c2c2c2'
     },
     tabBarItemLabelActive: {
@@ -43,8 +44,8 @@ export default StyleSheet.create({
     },
     tabBarItemIconPublish: {
         position: 'relative',
-        top: -23.5,
-        width: 85,
-        height: 85
+        top: scaleSize(-47),
+        width: scaleSize(170),
+        height: scaleSize(170)
     }
 })
