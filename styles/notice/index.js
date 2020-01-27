@@ -62,5 +62,86 @@ export default StyleSheet.create({
     noticeTabItemText: {
         fontSize: scaleFont(18),
         color: '#ffffff'
+    },
+    noticeList: {
+        flexGrow: 1,
+        marginTop: scaleSize(24),
+        backgroundColor: '#ffffff'
+    },
+    noticeListItemRowFrontWrapper: {
+        paddingTop: scaleSize(65),
+        paddingBottom: scaleSize(45),
+        borderBottomWidth: 1,
+        borderBottomColor: '#f2f2f2' 
+    },
+    noticeListItemRowFront: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center'
+    },
+    noticeListItemFrontLeft: {
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    noticeListItemAvatar: {
+        width: scaleSize(132),
+        height: scaleSize(132)
+    },
+    noticeListItemHint: {
+        marginLeft: scaleSize(42)
+    },
+    noticeListItemName: {
+        fontSize: scaleFont(21),
+        color: '#333333'
+    },
+    noticeListItemOverview: {
+        marginTop: scaleSize(16),
+        fontSize: scaleFont(19.5),
+        color: '#999999'
+    },
+    noticeListItemFrontRight: {
+        alignItems: 'flex-end'
+    },
+    noticeListItemTime: {
+        fontSize: scaleFont(19.5),
+        color: '#999999'
+    },
+    noticeListItemUreadCount: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: scaleSize(14.7),
+        width: scaleSize(57),
+        height: scaleSize(57),
+        borderRadius: scaleSize(57),
+        backgroundColor: '#d86161' 
+    },
+    noticeListItemUreadCountNumber: {
+        fontSize: scaleFont(20),
+        color: '#ffffff'
+    },
+
+    noticeListItemRowBack: {
+        flexGrow: 1,
+        flexDirection: 'row',
+        // alignItems: 'center',
+        // backgroundColor: '#DDD',
+        // justifyContent: 'space-between',
+        // paddingLeft: 15
+    },
+    backRightBtn: {
+        alignItems: 'center',
+        bottom: 0,
+        justifyContent: 'center',
+        position: 'absolute',
+        top: 0,
+        width: 75
+    },
+    backRightBtnLeft: {
+        backgroundColor: 'blue',
+        right: 75
+    },
+    backRightBtnRight: {
+        backgroundColor: 'red',
+        right: 0
     }
 })
