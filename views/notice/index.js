@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, Image, TouchableHighlight, TouchableOpacity } from 'react-native'
 import { SwipeListView } from 'react-native-swipe-list-view'
+import { scaleSize, scaleFont } from '@utils/scaleUtil'
 import styles from '@styles/notice/index'
 
 export default () => {
@@ -8,7 +9,7 @@ export default () => {
         key: '1',
         name: '李二麻子',
         avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png', 
-        overview: '你好你好你好你好你好',
+        overview: '你好你好你好你好你好你好你好你好',
         time: '9: 00',
         unreadCount: 1
     }, {
@@ -88,14 +89,18 @@ export default () => {
     )
     const renderNoticeHiddenItem = () => (
         <View style={styles.noticeListItemRowBack}>
-            <TouchableOpacity 
-                style={[styles.backRightBtn, styles.backRightBtnLeft]}>
-                <Text>置顶</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-                style={[styles.backRightBtn, styles.backRightBtnRight]}>
-                <Text>删除</Text>
-            </TouchableOpacity>
+            <TouchableHighlight style={[styles.backRightBtn, styles.backRightBtnToTop]}>
+                <Text style={styles.backRightBtnText}>置顶</Text>
+            </TouchableHighlight>
+            <TouchableHighlight style={[styles.backRightBtn, styles.backRightBtnRead]}>
+                <View>
+                    <Text style={styles.backRightBtnText}>标为</Text>
+                    <Text style={[styles.backRightBtnText, { marginTop: 5 }]}>已读</Text>
+                </View>
+            </TouchableHighlight>
+            <TouchableHighlight style={[styles.backRightBtn, styles.backRightBtnDelete]}>
+                <Text style={styles.backRightBtnText}>删除</Text>
+            </TouchableHighlight>
         </View> 
     )
     const NoticeList = () => (
@@ -103,10 +108,10 @@ export default () => {
             <SwipeListView
                 data={data}
                 renderItem={renderNoticeListItem} 
-                // renderHiddenItem={renderNoticeHiddenItem}
+                renderHiddenItem={renderNoticeHiddenItem}
                 disableRightSwipe={true}
-                leftOpenValue={75}
-                rightOpenValue={-150} />
+                leftOpenValue={scaleSize(300)}
+                rightOpenValue={scaleSize(-550)} />
         </View>
     )
     return (

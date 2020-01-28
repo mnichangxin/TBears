@@ -64,19 +64,22 @@ export default StyleSheet.create({
         color: '#ffffff'
     },
     noticeList: {
-        flexGrow: 1,
+        flexDirection: 'row',
         marginTop: scaleSize(24),
         backgroundColor: '#ffffff'
     },
     noticeListItemRowFrontWrapper: {
         paddingTop: scaleSize(65),
         paddingBottom: scaleSize(45),
+        paddingLeft: scaleSize(55),
+        paddingRight: scaleSize(55),
         borderBottomWidth: 1,
-        borderBottomColor: '#f2f2f2' 
+        borderBottomColor: '#f2f2f2',
+        backgroundColor: '#ffffff' 
     },
     noticeListItemRowFront: {
         flexDirection: 'row',
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
         alignItems: 'center'
     },
     noticeListItemFrontLeft: {
@@ -119,29 +122,31 @@ export default StyleSheet.create({
         fontSize: scaleFont(20),
         color: '#ffffff'
     },
-
     noticeListItemRowBack: {
         flexGrow: 1,
-        flexDirection: 'row',
-        // alignItems: 'center',
-        // backgroundColor: '#DDD',
-        // justifyContent: 'space-between',
-        // paddingLeft: 15
+        flexDirection: 'row'
     },
     backRightBtn: {
         alignItems: 'center',
-        bottom: 0,
         justifyContent: 'center',
         position: 'absolute',
         top: 0,
-        width: 75
+        bottom: 0,
+        width: scaleSize(150)
     },
-    backRightBtnLeft: {
-        backgroundColor: 'blue',
-        right: 75
+    backRightBtnToTop: {
+        backgroundColor: '#c2c2c2',
+        right: scaleSize(300)
     },
-    backRightBtnRight: {
-        backgroundColor: 'red',
+    backRightBtnRead: {
+        backgroundColor: '#c9c9c9',
+        right: scaleSize(150)
+    },
+    backRightBtnDelete: {
+        backgroundColor: '#d86161',
         right: 0
+    },
+    backRightBtnText: {
+        color: '#ffffff'
     }
 })
