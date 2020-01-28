@@ -78,11 +78,7 @@ export default props => {
         <View style={styles.noticeTab}>
             <TouchableOpacity 
                 activeOpacity={1} 
-                onPress={() => { 
-                        console.log(props)
-                        props.navigation.navigate('InteractiveNotification') 
-                    } 
-                }>
+                onPress={() => props.navigation.navigate('InteractiveNotification')}>
                 <View style={[styles.noticeTabItem, { backgroundColor: '#f36968' }]}>
                     <Image
                         source={{ uri: 'http://q4pas9fmo.bkt.clouddn.com/interactive-notification.png' }}
@@ -90,12 +86,16 @@ export default props => {
                     <Text style={styles.noticeTabItemText}>互动通知</Text>
                 </View>
             </TouchableOpacity>
-            <View style={[styles.noticeTabItem, { backgroundColor: '#6ad8af' }]}>
-                <Image
-                    source={{ uri: 'http://q4pas9fmo.bkt.clouddn.com/activity-list.png' }}
-                    style={styles.noticeTabItemIcon} />
-                <Text style={styles.noticeTabItemText}>活动列表</Text>
-            </View>
+            <TouchableOpacity 
+                activeOpacity={1} 
+                onPress={() => props.navigation.navigate('ActivityList')}>
+                <View style={[styles.noticeTabItem, { backgroundColor: '#6ad8af' }]}>
+                    <Image
+                        source={{ uri: 'http://q4pas9fmo.bkt.clouddn.com/activity-list.png' }}
+                        style={styles.noticeTabItemIcon} />
+                    <Text style={styles.noticeTabItemText}>活动列表</Text>
+                </View>
+            </TouchableOpacity>
             <View style={[styles.noticeTabItem, { backgroundColor: '#62a6fc' }]}>
                 <Image
                     source={{ uri: 'http://q4pas9fmo.bkt.clouddn.com/friends-list.png' }}

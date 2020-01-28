@@ -1,6 +1,7 @@
 import MainTabScreen from '@views/mainTab/index'
 import LoginScreen from '@views/login/index'
 import InteractiveNotification from '@views/notice/interactiveNotification'
+import ActivityList from '@views/notice/activityList'
 
 export default {
     MainTab: {
@@ -11,5 +12,8 @@ export default {
     },
     InteractiveNotification: {
         screen: InteractiveNotification
+    },
+    ActivityList: {
+        screen: ActivityList
     }
 }

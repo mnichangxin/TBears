@@ -3,7 +3,7 @@
  */
 
 import React from 'react'
-import { View, SafeAreaView, Text, Image, TouchableOpacity, FlatList } from 'react-native'
+import { View, SafeAreaView, Text, Image, FlatList } from 'react-native'
 import Header from '@views/common/header'
 import styles from '@styles/notice/interactiveNotification'
 

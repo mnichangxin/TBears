@@ -1,3 +1,7 @@
+/**
+ * 头部组件
+ */
+
 import React from 'react'
 import { View, Text, Image, TouchableOpacity } from 'react-native'
 import styles from '@styles/common/header'
