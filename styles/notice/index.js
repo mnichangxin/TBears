@@ -64,9 +64,13 @@ export default StyleSheet.create({
         color: '#ffffff'
     },
     noticeList: {
+        flex: 1,
         flexDirection: 'row',
         marginTop: scaleSize(24),
         backgroundColor: '#ffffff'
+    },
+    noticeListView: {
+        flex: 1
     },
     noticeListItemRowFrontWrapper: {
         paddingTop: scaleSize(65),

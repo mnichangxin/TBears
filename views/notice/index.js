@@ -26,6 +26,48 @@ export default () => {
         overview: '你好你好你好你好你好',
         time: '9: 00',
         unreadCount: 0
+    }, {
+        key: '4',
+        name: '新人助手',
+        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png', 
+        overview: '你好你好你好你好你好',
+        time: '9: 00',
+        unreadCount: 0
+    }, {
+        key: '5',
+        name: '新人助手',
+        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png', 
+        overview: '你好你好你好你好你好',
+        time: '9: 00',
+        unreadCount: 0
+    }, {
+        key: '6',
+        name: '新人助手',
+        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png', 
+        overview: '你好你好你好你好你好',
+        time: '9: 00',
+        unreadCount: 0
+    }, {
+        key: '7',
+        name: '新人助手',
+        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png', 
+        overview: '你好你好你好你好你好',
+        time: '9: 00',
+        unreadCount: 0
+    }, {
+        key: '8',
+        name: '新人助手',
+        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png', 
+        overview: '你好你好你好你好你好',
+        time: '9: 00',
+        unreadCount: 0
+    }, {
+        key: '9',
+        name: '新人助手',
+        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png', 
+        overview: '你好你好你好你好你好',
+        time: '9: 00',
+        unreadCount: 0
     }]
     const Header = () => (
         <View style={styles.header}>
@@ -106,9 +148,11 @@ export default () => {
     const NoticeList = () => (
         <View style={styles.noticeList}>
             <SwipeListView
+                style={styles.noticeListView}
                 data={data}
                 renderItem={renderNoticeListItem} 
                 renderHiddenItem={renderNoticeHiddenItem}
+                showsVerticalScrollIndicator={false}
                 disableRightSwipe={true}
                 leftOpenValue={scaleSize(300)}
                 rightOpenValue={scaleSize(-550)} />
