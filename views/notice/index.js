@@ -1,10 +1,15 @@
+/**
+ * 消息主页面
+ */
+
 import React from 'react'
 import { View, Text, Image, TouchableHighlight, TouchableOpacity } from 'react-native'
 import { SwipeListView } from 'react-native-swipe-list-view'
-import { scaleSize, scaleFont } from '@utils/scaleUtil'
+import { scaleSize } from '@utils/scaleUtil'
+import Header from '@views/common/header'
 import styles from '@styles/notice/index'
 
-export default () => {
+export default props => {
     const data = [{
         key: '1',
         name: '李二麻子',
@@ -69,25 +74,22 @@ export default () => {
         time: '9: 00',
         unreadCount: 0
     }]
-    const Header = () => (
-        <View style={styles.header}>
-            <View style={styles.headerLeft}></View>
-            <View style={styles.headerTitle}>
-                <Text style={styles.headerTitleText}>消息</Text>
-            </View>
-            <View style={styles.headerRight}>
-                <Text style={styles.headerRightText}>添加好友</Text>
-            </View>
-        </View>
-    )
     const NoticeTab = () => (
         <View style={styles.noticeTab}>
-            <View style={[styles.noticeTabItem, { backgroundColor: '#f36968' }]}>
-                <Image
-                    source={{ uri: 'http://q4pas9fmo.bkt.clouddn.com/interactive-notification.png' }}
-                    style={styles.noticeTabItemIcon} />
-                <Text style={styles.noticeTabItemText}>互动通知</Text>
-            </View>
+            <TouchableOpacity 
+                activeOpacity={1} 
+                onPress={() => { 
+                        console.log(props)
+                        props.navigation.navigate('InteractiveNotification') 
+                    } 
+                }>
+                <View style={[styles.noticeTabItem, { backgroundColor: '#f36968' }]}>
+                    <Image
+                        source={{ uri: 'http://q4pas9fmo.bkt.clouddn.com/interactive-notification.png' }}
+                        style={styles.noticeTabItemIcon} />
+                    <Text style={styles.noticeTabItemText}>互动通知</Text>
+                </View>
+            </TouchableOpacity>
             <View style={[styles.noticeTabItem, { backgroundColor: '#6ad8af' }]}>
                 <Image
                     source={{ uri: 'http://q4pas9fmo.bkt.clouddn.com/activity-list.png' }}
@@ -160,7 +162,12 @@ export default () => {
     )
     return (
         <View style={styles.root}>
-            <Header />
+            <Header
+                title="消息"
+                left={null}
+                right={
+                    <Text style={styles.headerRightText}>添加好友</Text>
+                } />
             <View style={styles.body}>
                 <NoticeTab />
                 <NoticeList />

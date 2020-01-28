@@ -15,10 +15,10 @@ export default connect(mapStateToProps, mapDispatchToProps)(props => {
     const onTabItemPress = tabItem => () => {
         props.actions.switch_tab(tabItem.name)
     }
-    const CurrentTabScreen = () => {
+    const CurrentTabScreen = props => {
         for (let i = 0, len = tabNavigatorConfig.length; i < len; i++) {
             if (tabNavigatorConfig[i].name === props.current_tab) {
-                return tabNavigatorConfig[i].screen()
+                return tabNavigatorConfig[i].screen(props)
             }
         }
         return null
@@ -28,7 +28,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(props => {
             <SafeAreaView>
                 <View style={styles.root}>
                     <View style={styles.tabScreen}>
-                       <CurrentTabScreen />
+                       <CurrentTabScreen { ...props } />
                     </View>
                     <View style={styles.tabBar}>
                         {
