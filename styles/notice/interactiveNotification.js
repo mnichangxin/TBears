@@ -30,7 +30,7 @@ export default StyleSheet.create({
         marginLeft: scaleSize(33)
     },
     interactiveListItemActivity: {
-        fontSize: scaleFont(21),
+        fontSize: scaleFont(42),
         color: '#333333'
     }
 })

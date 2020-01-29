@@ -6,7 +6,7 @@ export default StyleSheet.create({
         flexGrow: 1
     },
     headerRightText: {
-        fontSize: scaleFont(19),
+        fontSize: scaleFont(38),
         color: '#999999'
     },
     body: {
@@ -35,7 +35,7 @@ export default StyleSheet.create({
         height: scaleSize(108)
     },
     noticeTabItemText: {
-        fontSize: scaleFont(18),
+        fontSize: scaleFont(36),
         color: '#ffffff'
     },
     noticeList: {
@@ -73,19 +73,19 @@ export default StyleSheet.create({
         marginLeft: scaleSize(42)
     },
     noticeListItemName: {
-        fontSize: scaleFont(21),
+        fontSize: scaleFont(42),
         color: '#333333'
     },
     noticeListItemOverview: {
         marginTop: scaleSize(16),
-        fontSize: scaleFont(19.5),
+        fontSize: scaleFont(39),
         color: '#999999'
     },
     noticeListItemFrontRight: {
         alignItems: 'flex-end'
     },
     noticeListItemTime: {
-        fontSize: scaleFont(19.5),
+        fontSize: scaleFont(39),
         color: '#999999'
     },
     noticeListItemUreadCount: {
@@ -98,7 +98,7 @@ export default StyleSheet.create({
         backgroundColor: '#d86161' 
     },
     noticeListItemUreadCountNumber: {
-        fontSize: scaleFont(20),
+        fontSize: scaleFont(40),
         color: '#ffffff'
     },
     noticeListItemRowBack: {

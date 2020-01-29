@@ -25,7 +25,7 @@ export default StyleSheet.create({
     },
     tipText: {
         marginLeft: scaleSize(16),
-        fontSize: scaleFont(18),
+        fontSize: scaleFont(36),
         color: '#333333'
     },
     activityListWrapper: {
@@ -60,18 +60,18 @@ export default StyleSheet.create({
         paddingBottom: scaleSize(52)
     },
     activityListItemTitle: {
-        fontSize: scaleFont(24),
+        fontSize: scaleFont(48),
         color: '#333333',
         fontWeight: 'bold'
     },
     activityListItemTime: {
         marginTop: scaleSize(28),
-        fontSize: scaleFont(21),
+        fontSize: scaleFont(42),
         color: '#999999'
     },
     activityListItemLocationText: {
         marginTop: scaleSize(28),
-        fontSize: scaleFont(18),
+        fontSize: scaleFont(36),
         color: '#999999'
     },
     activityListItemNumberWrapper: {
@@ -90,13 +90,13 @@ export default StyleSheet.create({
         backgroundColor: '#f3f3f3'
     },
     activityListItemNumberDes: {
-        fontSize: scaleFont(21),
+        fontSize: scaleFont(42),
         fontWeight: 'bold',
         color: '#333333'
     },
     activityListItemNumberCount: {
         marginTop: scaleSize(25),
-        fontSize: scaleFont(21),
+        fontSize: scaleFont(42),
         fontWeight: 'bold',
         color: '#897fdd' 
     },
@@ -110,7 +110,7 @@ export default StyleSheet.create({
         backgroundColor: '#564f5f'
     },
     activityDetailButtonText: {
-        fontSize: scaleFont(18),
+        fontSize: scaleFont(36),
         fontWeight: 'bold',
         color: '#ffffff'
     }

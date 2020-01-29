@@ -23,7 +23,7 @@ export default StyleSheet.create({
         alignItems: 'center'
     },
     headerTitleText: {
-        fontSize: scaleFont(24),
+        fontSize: scaleFont(48),
         fontWeight: 'bold',
         color: '#333333'
     },

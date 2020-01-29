@@ -36,7 +36,7 @@ export default StyleSheet.create({
     },
     tabBarItemLabel: {
         marginTop: scaleSize(9),
-        fontSize: scaleFont(16.5),
+        fontSize: scaleFont(33),
         color: '#c2c2c2'
     },
     tabBarItemLabelActive: {

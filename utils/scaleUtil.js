@@ -12,6 +12,6 @@ const fontScale = PixelRatio.getFontScale()
 
 const scale = Math.min(deviceWidth / designWidth, deviceHeight / designHeight)
 
-export const scaleFont = size => Math.round((size * scale + 0.5) * pixelRatio / fontScale) / defaultPixel
+export const scaleFont = size => Math.round((size * scale + 0.5) / fontScale / defaultPixel)
 export const scaleSize = size => Math.round(size * scale + 0.5) / defaultPixel
 export const scaleDp = size => Math.round(size * pixelRatio + 0.5) / defaultPixel
