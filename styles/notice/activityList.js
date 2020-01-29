@@ -1,9 +1,11 @@
 import { StyleSheet } from 'react-native'
 import { scaleSize, scaleFont } from '@utils/scaleUtil'
+import { ifIphoneX } from '@utils/screenUtil'
 
 export default StyleSheet.create({
     root: {
         flexGrow: 1,
+        paddingTop: ifIphoneX(34, 30),
         backgroundColor: '#ffffff'
     },
     bodyTop: {

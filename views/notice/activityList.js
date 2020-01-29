@@ -3,7 +3,7 @@
  */
 
 import React from 'react'
-import { View, SafeAreaView, Text, Image, FlatList } from 'react-native'
+import { View, Text, Image, FlatList } from 'react-native'
 import Header from '@views/common/header'
 import styles from '@styles/notice/activityList'
 
@@ -65,24 +65,22 @@ export default props => {
     )
     return (
         <View style={styles.root}>
-            <SafeAreaView style={{ flexGrow: 1 }}>
-                <Header { ...props } title="活动列表" />
-                <View style={styles.bodyTop}>
-                    <View style={styles.tip}>
-                        <Image
-                            source={{ uri: 'http://q4pas9fmo.bkt.clouddn.com/tip.png' }}
-                            style={styles.tipIcon} />
-                        <Text style={styles.tipText}>此处只展示关系网内活动</Text>
-                    </View>
+            <Header { ...props } title="活动列表" />
+            <View style={styles.bodyTop}>
+                <View style={styles.tip}>
+                    <Image
+                        source={{ uri: 'http://q4pas9fmo.bkt.clouddn.com/tip.png' }}
+                        style={styles.tipIcon} />
+                    <Text style={styles.tipText}>此处只展示关系网内活动</Text>
                 </View>
-                <View style={styles.activityListWrapper}>
-                    <FlatList 
-                        style={styles.activityList}
-                        data={data}
-                        showsVerticalScrollIndicator={false}
-                        renderItem={renderActivityListItem} />
-                </View>
-            </SafeAreaView>
+            </View>
+            <View style={styles.activityListWrapper}>
+                <FlatList 
+                    style={styles.activityList}
+                    data={data}
+                    showsVerticalScrollIndicator={false}
+                    renderItem={renderActivityListItem} />
+            </View>
         </View>
     )
 }

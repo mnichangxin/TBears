@@ -35,7 +35,7 @@ export default props => {
     )
     return (
         <View style={styles.root}>
-            <SafeAreaView style={{ flexGrow: 1 }}>
+            {/* <SafeAreaView style={{ flexGrow: 1 }}> */}
                 <Header { ...props } title="互动列表" />
                 <View style={styles.interactiveListWrapper}>
                     <FlatList 
@@ -44,7 +44,7 @@ export default props => {
                         showsVerticalScrollIndicator={false}
                         renderItem={renderInteractiveListItem} />
                 </View>
-            </SafeAreaView>
+            {/* </SafeAreaView> */}
         </View>
     )
 }
