@@ -96,12 +96,16 @@ export default props => {
                     <Text style={styles.noticeTabItemText}>活动列表</Text>
                 </View>
             </TouchableOpacity>
-            <View style={[styles.noticeTabItem, { backgroundColor: '#62a6fc' }]}>
-                <Image
-                    source={{ uri: 'http://q4pas9fmo.bkt.clouddn.com/friends-list.png' }}
-                    style={styles.noticeTabItemIcon} />
-                <Text style={styles.noticeTabItemText}>好友列表</Text>
-            </View>
+            <TouchableOpacity 
+                activeOpacity={1} 
+                onPress={() => props.navigation.navigate('FriendsList')}>
+                <View style={[styles.noticeTabItem, { backgroundColor: '#62a6fc' }]}>
+                    <Image
+                        source={{ uri: 'http://q4pas9fmo.bkt.clouddn.com/friends-list.png' }}
+                        style={styles.noticeTabItemIcon} />
+                    <Text style={styles.noticeTabItemText}>好友列表</Text>
+                </View>
+            </TouchableOpacity>
         </View>
     )
     const renderNoticeListItem = data => (

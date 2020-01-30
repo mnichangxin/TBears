@@ -1,8 +1,13 @@
+/**
+ *  首页
+ */
+
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
+import Header from '@views/common/header'
 
 export default () => (
     <View>
-        <Text>Home</Text>
+        <Header title="首页" left={null} />
     </View>
 )

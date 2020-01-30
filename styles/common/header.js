@@ -1,7 +1,11 @@
 import { StyleSheet } from 'react-native'
 import { scaleSize, scaleFont } from '@utils/scaleUtil'
+import { ifIphoneX } from '@utils/screenUtil'
 
 export default StyleSheet.create({
+    headerContainer: {
+        paddingTop: ifIphoneX(44, 30)
+    },
     header: {
         flexDirection: 'row',
         justifyContent: 'center',

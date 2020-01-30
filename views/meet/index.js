@@ -1,8 +1,13 @@
+/**
+ *  擦肩
+ */
+
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
+import Header from '@views/common/header'
 
 export default () => (
     <View>
-        <Text>Meet</Text>
+        <Header title="擦肩" left={null} />
     </View>
 )

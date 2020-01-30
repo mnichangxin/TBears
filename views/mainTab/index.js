@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { View, SafeAreaView, Text, Image, TouchableOpacity } from 'react-native'
+import { View, Text, Image, TouchableOpacity } from 'react-native'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as actions from '@actions/index.js'
@@ -60,27 +60,25 @@ export default connect(mapStateToProps, mapDispatchToProps)(props => {
     }
     return (
         <View style={styles.rootWrapper}>
-            <SafeAreaView>
-                <View style={styles.root}>
-                    <View style={styles.tabScreen}>
-                       {
-                           tabNavigatorConfig.map(tabItem => (
-                                tabItem.screen
-                                &&
-                                <ScreenContainer 
-                                    {...props} 
-                                    key={tabItem.name}
-                                    selected={tabItem.name === props.current_tab}>
-                                    <tabItem.screen {...props} />
-                                </ScreenContainer>
-                           ))
-                       }
-                    </View>
-                    <TabBar 
-                        { ...props } 
-                        onTabItemPress={onTabItemPress} />
+            <View style={styles.root}>
+                <View style={styles.tabScreen}>
+                    {
+                        tabNavigatorConfig.map(tabItem => (
+                            tabItem.screen
+                            &&
+                            <ScreenContainer 
+                                {...props} 
+                                key={tabItem.name}
+                                selected={tabItem.name === props.current_tab}>
+                                <tabItem.screen {...props} />
+                            </ScreenContainer>
+                        ))
+                    }
                 </View>
-            </SafeAreaView>
+                <TabBar 
+                    { ...props } 
+                    onTabItemPress={onTabItemPress} />
+            </View>
         </View>
     )
 })

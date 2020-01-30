@@ -1,8 +1,13 @@
+/**
+ *  我的
+ */
+
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
+import Header from '@views/common/header'
 
 export default () => (
     <View>
-        <Text>Mine</Text>
+        <Header title="我的" left={null} />
     </View>
 )

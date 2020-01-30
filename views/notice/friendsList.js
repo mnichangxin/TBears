@@ -1,11 +1,11 @@
 /**
- * 互动通知
+ * 好友列表
  */
 
 import React from 'react'
 import { View, Text, Image, FlatList } from 'react-native'
 import Header from '@views/common/header'
-import styles from '@styles/notice/interactiveNotification'
+import styles from '@styles/notice/friendsList'
 
 export default props => {
     const data = [{
@@ -35,7 +35,7 @@ export default props => {
     )
     return (
         <View style={styles.root}>
-            <Header { ...props } title="互动列表" />
+            <Header { ...props } title="好友列表" />
             <View style={styles.interactiveListWrapper}>
                 <FlatList 
                     style={styles.interactiveList}

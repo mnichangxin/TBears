@@ -1,8 +1,10 @@
 import { StyleSheet } from 'react-native'
 import { scaleSize, scaleFont } from '@utils/scaleUtil'
+import { ifIphoneX } from '@utils/screenUtil'
 
 export default StyleSheet.create({
     rootWrapper: {
+        paddingBottom: ifIphoneX(30, 0),
         backgroundColor: '#ffffff'
     },
     root: {
