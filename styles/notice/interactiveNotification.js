@@ -12,13 +12,15 @@ export default StyleSheet.create({
     interactiveList: {
         flex: 1
     },
+    interactiveListItemWrapper: {
+        paddingLeft: scaleSize(55),
+        paddingRight: scaleSize(55)
+    },
     interactiveListItem: {
         flexDirection: 'row',
         alignItems: 'center',
         paddingTop: scaleSize(65),
         paddingBottom: scaleSize(45),
-        paddingLeft: scaleSize(55),
-        paddingRight: scaleSize(55),
         borderBottomWidth: 1,
         borderBottomColor: '#f2f2f2'
     },

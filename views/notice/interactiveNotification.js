@@ -22,14 +22,16 @@ export default props => {
         activity: '王二麻子点赞了你的动态' 
     }]
     const renderInteractiveListItem = data => (
-        <View style={styles.interactiveListItem}>
-            <View>
-                <Image
-                    style={styles.interactiveListItemAvatar}
-                    source={{ uri: data.item.avatarUri }} />
-            </View>
-            <View style={styles.interactiveListItemActivityWrapper}>
-                <Text style={styles.interactiveListItemActivity}>{ data.item.activity }</Text>
+        <View style={styles.interactiveListItemWrapper}>
+            <View style={styles.interactiveListItem}>
+                <View>
+                    <Image
+                        style={styles.interactiveListItemAvatar}
+                        source={{ uri: data.item.avatarUri }} />
+                </View>
+                <View style={styles.interactiveListItemActivityWrapper}>
+                    <Text style={styles.interactiveListItemActivity}>{ data.item.activity }</Text>
+                </View>
             </View>
         </View>
     )

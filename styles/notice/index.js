@@ -48,18 +48,18 @@ export default StyleSheet.create({
         flex: 1
     },
     noticeListItemRowFrontWrapper: {
-        paddingTop: scaleSize(65),
-        paddingBottom: scaleSize(45),
         paddingLeft: scaleSize(55),
         paddingRight: scaleSize(55),
-        borderBottomWidth: 1,
-        borderBottomColor: '#f2f2f2',
         backgroundColor: '#ffffff' 
     },
     noticeListItemRowFront: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingTop: scaleSize(65),
+        paddingBottom: scaleSize(45),
+        borderBottomWidth: 1,
+        borderBottomColor: '#f2f2f2'
     },
     noticeListItemFrontLeft: {
         flexDirection: 'row',

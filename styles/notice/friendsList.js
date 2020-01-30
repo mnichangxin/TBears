@@ -6,31 +6,35 @@ export default StyleSheet.create({
         flexGrow: 1,
         backgroundColor: '#ffffff'
     },
-    interactiveListWrapper: {
+    friendsListWrapper: {
         flex: 1
     },
-    interactiveList: {
+    friendsList: {
         flex: 1
     },
-    interactiveListItem: {
+    friendsListItemWrapper: {
+        paddingLeft: scaleSize(55),
+        paddingRight: scaleSize(55)
+    },
+    friendsListItem: {
         flexDirection: 'row',
         alignItems: 'center',
         paddingTop: scaleSize(65),
         paddingBottom: scaleSize(45),
-        paddingLeft: scaleSize(55),
-        paddingRight: scaleSize(55),
         borderBottomWidth: 1,
         borderBottomColor: '#f2f2f2'
     },
-    interactiveListItemAvatar: {
+    friendsListItemLeft: {
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    friendsListItemAvatar: {
         width: scaleSize(132),
         height: scaleSize(132)
     },
-    interactiveListItemActivityWrapper: {
-        marginLeft: scaleSize(33)
-    },
-    interactiveListItemActivity: {
-        fontSize: scaleFont(42),
+    friendsListItemNickname: {
+        marginLeft: scaleSize(42),
+        fontSize: scaleFont(48),
         color: '#333333'
     }
 })
