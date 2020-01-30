@@ -47,5 +47,16 @@ export default StyleSheet.create({
         top: scaleSize(-47),
         width: scaleSize(170),
         height: scaleSize(170)
+    },
+    screen: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0
+    },
+    screenHidden: {
+        overflow: 'hidden',
+        opacity: 0
     }
 })

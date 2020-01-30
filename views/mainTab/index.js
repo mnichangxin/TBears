@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { View, SafeAreaView, Text, Image, TouchableOpacity } from 'react-native'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
@@ -6,60 +6,79 @@ import * as actions from '@actions/index.js'
 import tabNavigatorConfig from '@router/tabNavigatorConfig'
 import styles from '@styles/mainTab'
 
-const mapStateToProps = state => ({
-    current_tab: state.current_tab
-})
+const TabBar = props => (
+    <View style={styles.tabBar}>
+        {
+            tabNavigatorConfig.map(tabItem => (
+                <TouchableOpacity 
+                    activeOpacity={1}
+                    style={[styles.tabBarItem, tabItem.name === 'Publish' && styles.tabBarItemPublish]}
+                    key={tabItem.name}
+                    onPress={props.onTabItemPress(tabItem)}>
+                    {
+                        tabItem.name === 'Publish'
+                        ?
+                        <Image 
+                            source={{ uri: tabItem.iconInactiveUri }}
+                            style={styles.tabBarItemIconPublish} />
+                        :
+                        <View>
+                            <Image 
+                                source={{ uri: props.current_tab === tabItem.name ? tabItem.iconActiveUri : tabItem.iconInactiveUri }}
+                                style={styles.tabBarItemIcon} />
+                            <Text 
+                                style={[styles.tabBarItemLabel, 
+                                props.current_tab === tabItem.name && styles.tabBarItemLabelActive]}>
+                                { tabItem.label }
+                            </Text>
+                        </View>
+                    }
+                </TouchableOpacity>
+            ))
+        }
+    </View>
+)
+
+const ScreenContainer = ({ selected, children }) => {
+    const StaticScreen = useMemo(() => children, [])
+    return (
+        <View
+            pointerEvents={selected ? 'auto' : 'none'}
+            removeClippedSubviews={!selected} 
+            style={[styles.screen, !selected && styles.screenHidden]}>
+            { StaticScreen }
+        </View>
+    )
+}
+
+const mapStateToProps = state => ({ current_tab: state.current_tab })
 const mapDispatchToProps = dispatch => ({ actions: bindActionCreators(actions, dispatch) })
 
 export default connect(mapStateToProps, mapDispatchToProps)(props => {
     const onTabItemPress = tabItem => () => {
-        props.actions.switch_tab(tabItem.name)
-    }
-    const CurrentTabScreen = props => {
-        for (let i = 0, len = tabNavigatorConfig.length; i < len; i++) {
-            if (tabNavigatorConfig[i].name === props.current_tab) {
-                return tabNavigatorConfig[i].screen(props)
-            }
-        }
-        return null
+        tabItem.name !== 'Publish' && props.actions.switch_tab(tabItem.name)
     }
     return (
         <View style={styles.rootWrapper}>
             <SafeAreaView>
                 <View style={styles.root}>
                     <View style={styles.tabScreen}>
-                       <CurrentTabScreen { ...props } />
-                    </View>
-                    <View style={styles.tabBar}>
-                        {
-                            tabNavigatorConfig.map(tabItem => (
-                                tabItem.name !== 'Publish'
-                                ?
-                                <TouchableOpacity 
-                                    activeOpacity={1}
-                                    style={styles.tabBarItem}
+                       {
+                           tabNavigatorConfig.map(tabItem => (
+                                tabItem.screen
+                                &&
+                                <ScreenContainer 
+                                    {...props} 
                                     key={tabItem.name}
-                                    onPress={onTabItemPress(tabItem)}>
-                                    <Image 
-                                        source={{ uri: props.current_tab === tabItem.name ? tabItem.iconActiveUri : tabItem.iconInactiveUri }}
-                                        style={styles.tabBarItemIcon} />
-                                    <Text 
-                                        style={[styles.tabBarItemLabel, 
-                                        props.current_tab === tabItem.name && styles.tabBarItemLabelActive]}>
-                                        { tabItem.label }
-                                    </Text>
-                                </TouchableOpacity>
-                                :
-                                <TouchableOpacity 
-                                    style={[styles.tabBarItem, styles.tabBarItemPublish]}
-                                    key={tabItem.name}>
-                                    <Image 
-                                        source={{ uri: tabItem.iconInactiveUri }}
-                                        style={styles.tabBarItemIconPublish} />
-                                </TouchableOpacity>
-                            ))
-                        }
+                                    selected={tabItem.name === props.current_tab}>
+                                    <tabItem.screen {...props} />
+                                </ScreenContainer>
+                           ))
+                       }
                     </View>
+                    <TabBar 
+                        { ...props } 
+                        onTabItemPress={onTabItemPress} />
                 </View>
             </SafeAreaView>
         </View>

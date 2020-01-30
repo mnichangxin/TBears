@@ -7,7 +7,7 @@ export const isIphoneX = () => {
         !Platform.isPad &&
         !Platform.isTVOS &&
         ((dimen.height === 812 || dimen.width === 812) || (dimen.height === 896 || dimen.width === 896))
-    );
+    )
 }
 export const ifIphoneX = (iphoneXStyle, regularStyle) => {
     if (isIphoneX()) {
