@@ -170,7 +170,11 @@ export default props => {
                 title="消息"
                 left={null}
                 right={
-                    <Text style={styles.headerRightText}>添加好友</Text>
+                    <TouchableOpacity 
+                        activeOpacity={.6}
+                        onPress={() => props.navigation.navigate('AddFriends')}>
+                        <Text style={styles.headerRightText}>添加好友</Text>
+                    </TouchableOpacity>
                 } />
             <View style={styles.body}>
                 <NoticeTab />

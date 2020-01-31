@@ -3,6 +3,7 @@ import LoginScreen from '@views/login/index'
 import InteractiveNotification from '@views/notice/interactiveNotification'
 import ActivityList from '@views/notice/activityList'
 import FriendsList from '@views/notice/friendsList'
+import AddFriends from '@views/notice/addFriends'
 
 export default {
     MainTab: {
@@ -19,5 +20,8 @@ export default {
     },
     FriendsList: {
         screen: FriendsList
+    },
+    AddFriends: {
+        screen: AddFriends
     }
 }
