@@ -115,8 +115,9 @@ export default props => {
         </View>
     )
     const renderNoticeListItem = data => (
-        <TouchableHighlight 
+        <TouchableOpacity
             style={styles.noticeListItemRowFrontWrapper}
+            activeOpacity={1}
             onPress={goTChat} >
             <View style={styles.noticeListItemRowFront}>
                 <View style={styles.noticeListItemFrontLeft}>
@@ -141,7 +142,7 @@ export default props => {
                     }
                 </View>  
             </View>
-        </TouchableHighlight>
+        </TouchableOpacity>
     )
     const renderNoticeHiddenItem = () => (
         <View style={styles.noticeListItemRowBack}>

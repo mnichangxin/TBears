@@ -148,9 +148,9 @@
 				2020B875ACCFB5571F09EA7A /* Pods */,
 				F08F83C0F7BB420492B7D967 /* Resources */,
 			);
-			indentWidth = 2;
+			indentWidth = 4;
 			sourceTree = "<group>";
-			tabWidth = 2;
+			tabWidth = 4;
 			usesTabs = 0;
 		};
 		83CBBA001A601CBA00E9B192 /* Products */ = {
