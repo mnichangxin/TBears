@@ -3,7 +3,7 @@
  */
 
 import React from 'react'
-import { View, Text, Image, TouchableHighlight, TouchableOpacity } from 'react-native'
+import { View, Text, Image, TouchableHighlight, TouchableOpacity, NativeModules } from 'react-native'
 import { SwipeListView } from 'react-native-swipe-list-view'
 import { scaleSize } from '@utils/scaleUtil'
 import Header from '@views/common/header'
@@ -74,6 +74,12 @@ export default props => {
         time: '9: 00',
         unreadCount: 0
     }]
+
+    const goTChat = () => {
+        const RNBridge = NativeModules.RNBridge
+        RNBridge.jumpNativePage()
+    }
+
     const NoticeTab = () => (
         <View style={styles.noticeTab}>
             <TouchableOpacity 
@@ -109,7 +115,9 @@ export default props => {
         </View>
     )
     const renderNoticeListItem = data => (
-        <TouchableHighlight style={styles.noticeListItemRowFrontWrapper} >
+        <TouchableHighlight 
+            style={styles.noticeListItemRowFrontWrapper}
+            onPress={goTChat} >
             <View style={styles.noticeListItemRowFront}>
                 <View style={styles.noticeListItemFrontLeft}>
                     <Image 

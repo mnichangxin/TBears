@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		02AD445F5C2B4BC19F68328D /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06C997CDAFDF47F2852473AE /* Fontisto.ttf */; };
 		087CE9DCB40248FD8A6FC8C9 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC719B7B74734243B38DAEEB /* Feather.ttf */; };
+		0BB1169C23EC63B50079CEE8 /* RNBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1169B23EC63B50079CEE8 /* RNBridge.m */; };
+		0BB116A023EC65A30079CEE8 /* TChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1169F23EC65A30079CEE8 /* TChatViewController.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -36,6 +38,10 @@
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		06C997CDAFDF47F2852473AE /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/native-base/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
+		0BB1169A23EC63B50079CEE8 /* RNBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RNBridge.h; path = TBears/RNBridge.h; sourceTree = "<group>"; };
+		0BB1169B23EC63B50079CEE8 /* RNBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RNBridge.m; path = TBears/RNBridge.m; sourceTree = "<group>"; };
+		0BB1169E23EC65A30079CEE8 /* TChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TChatViewController.h; path = TBears/TChatViewController.h; sourceTree = "<group>"; };
+		0BB1169F23EC65A30079CEE8 /* TChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TChatViewController.m; path = TBears/TChatViewController.m; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* TBears.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBears.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TBears/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = TBears/AppDelegate.m; sourceTree = "<group>"; };
@@ -80,9 +86,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BB1169D23EC65470079CEE8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0BB1169E23EC65A30079CEE8 /* TChatViewController.h */,
+				0BB1169F23EC65A30079CEE8 /* TChatViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* TBears */ = {
 			isa = PBXGroup;
 			children = (
+				0BB1169D23EC65470079CEE8 /* Controllers */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -90,6 +106,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				0BB1169A23EC63B50079CEE8 /* RNBridge.h */,
+				0BB1169B23EC63B50079CEE8 /* RNBridge.m */,
 			);
 			name = TBears;
 			sourceTree = "<group>";
@@ -314,8 +332,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BB1169C23EC63B50079CEE8 /* RNBridge.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				0BB116A023EC65A30079CEE8 /* TChatViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
