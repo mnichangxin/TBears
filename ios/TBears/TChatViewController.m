@@ -1,9 +1,5 @@
 #import "TChatViewController.h"
 
-@interface TChatViewController ()
-
-@end
-
 @implementation TChatViewController
 
 - (void)viewDidLoad {

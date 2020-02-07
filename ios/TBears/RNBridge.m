@@ -10,7 +10,7 @@
     RCT_EXPORT_METHOD(jumpNativePage) {
         dispatch_async(dispatch_get_main_queue(), ^{
             AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-            [[appDelegate navController] setNavigationBarHidden:NO animated:YES];
+            [[appDelegate navController] setNavigationBarHidden:NO animated:NO];
             [[appDelegate navController] pushViewController:[TChatViewController new] animated:YES];
         });
     }
@@ -18,7 +18,6 @@
     RCT_EXPORT_METHOD(back){
         dispatch_async(dispatch_get_main_queue(), ^{
             AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-            [[appDelegate navController] setNavigationBarHidden:YES animated:YES];
             [[appDelegate navController] popViewControllerAnimated:YES];
         });
     }

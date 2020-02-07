@@ -1,4 +1,5 @@
 #import "AppDelegate.h"
+#import "RootViewController.h"
 
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
@@ -12,11 +13,10 @@
     
     [rootView setBackgroundColor:[[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1]];
     
-    UIViewController *rootViewController = [UIViewController new];
+    RootViewController *rootViewController = [RootViewController new];
     [rootViewController setView:rootView];
     
     [self setNavController:[[UINavigationController alloc] initWithRootViewController:rootViewController]];
-    [[self navController] setNavigationBarHidden:YES animated:YES];
     
     [self setWindow:[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds]];
     [[self window] setRootViewController:[self navController]];
