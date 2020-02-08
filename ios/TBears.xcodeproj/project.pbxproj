@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		02AD445F5C2B4BC19F68328D /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06C997CDAFDF47F2852473AE /* Fontisto.ttf */; };
 		087CE9DCB40248FD8A6FC8C9 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC719B7B74734243B38DAEEB /* Feather.ttf */; };
+		0B7061C323EE93F7009D3233 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7061C223EE93F7009D3233 /* RootViewController.m */; };
+		0B7061C623EE9443009D3233 /* TChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7061C523EE9443009D3233 /* TChatViewController.m */; };
 		0BB1169C23EC63B50079CEE8 /* RNBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1169B23EC63B50079CEE8 /* RNBridge.m */; };
-		0BB116A023EC65A30079CEE8 /* TChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1169F23EC65A30079CEE8 /* TChatViewController.m */; };
-		0BB5702523EDBEFE000DAF06 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB5702423EDBEFE000DAF06 /* RootViewController.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
-		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		1798AE37B53E4484ADDCAF30 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 493561F0AF1A4274BAA086B9 /* MaterialIcons.ttf */; };
@@ -37,21 +36,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; name = main.jsbundle; path = ../main.jsbundle; sourceTree = "<group>"; };
 		06C997CDAFDF47F2852473AE /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/native-base/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
-		0BB1169A23EC63B50079CEE8 /* RNBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RNBridge.h; path = TBears/RNBridge.h; sourceTree = "<group>"; };
-		0BB1169B23EC63B50079CEE8 /* RNBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RNBridge.m; path = TBears/RNBridge.m; sourceTree = "<group>"; };
-		0BB1169E23EC65A30079CEE8 /* TChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TChatViewController.h; sourceTree = "<group>"; };
-		0BB1169F23EC65A30079CEE8 /* TChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TChatViewController.m; sourceTree = "<group>"; };
-		0BB5702323EDBEFE000DAF06 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		0BB5702423EDBEFE000DAF06 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		0B7061C123EE93F7009D3233 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		0B7061C223EE93F7009D3233 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		0B7061C423EE9443009D3233 /* TChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TChatViewController.h; sourceTree = "<group>"; };
+		0B7061C523EE9443009D3233 /* TChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TChatViewController.m; sourceTree = "<group>"; };
+		0BB1169A23EC63B50079CEE8 /* RNBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNBridge.h; sourceTree = "<group>"; };
+		0BB1169B23EC63B50079CEE8 /* RNBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNBridge.m; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* TBears.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBears.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TBears/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = TBears/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = TBears/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TBears/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TBears/main.m; sourceTree = "<group>"; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		15B572E1A479478DA4B52662 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		187C83348ECC44948B7CB929 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		2FD57C4439F94CD08FAB6E49 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
@@ -89,32 +87,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0BB5702623EE8349000DAF06 /* Controllers */ = {
+		0B7061C023EE93BC009D3233 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0BB1169E23EC65A30079CEE8 /* TChatViewController.h */,
-				0BB1169F23EC65A30079CEE8 /* TChatViewController.m */,
-				0BB5702323EDBEFE000DAF06 /* RootViewController.h */,
-				0BB5702423EDBEFE000DAF06 /* RootViewController.m */,
+				0B7061C123EE93F7009D3233 /* RootViewController.h */,
+				0B7061C223EE93F7009D3233 /* RootViewController.m */,
+				0B7061C423EE9443009D3233 /* TChatViewController.h */,
+				0B7061C523EE9443009D3233 /* TChatViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* TBears */ = {
+		0BD9E44F23EE9AB400CDD17B /* TBears */ = {
 			isa = PBXGroup;
 			children = (
-				0BB5702623EE8349000DAF06 /* Controllers */,
+				0B7061C023EE93BC009D3233 /* Controllers */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				0BB1169A23EC63B50079CEE8 /* RNBridge.h */,
 				0BB1169B23EC63B50079CEE8 /* RNBridge.m */,
 			);
-			name = TBears;
+			path = TBears;
 			sourceTree = "<group>";
 		};
 		2020B875ACCFB5571F09EA7A /* Pods */ = {
@@ -146,7 +143,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* TBears */,
+				0BD9E44F23EE9AB400CDD17B /* TBears */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
@@ -249,7 +246,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				B6FDCF3DADF941A3B50307D6 /* AntDesign.ttf in Resources */,
 				E64347C64852438793C9767D /* Entypo.ttf in Resources */,
 				E40598B3F6D240FD935E8C9F /* EvilIcons.ttf in Resources */,
@@ -287,7 +283,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		469E6F7C3F338C070C9CEA5A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -338,26 +334,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BB1169C23EC63B50079CEE8 /* RNBridge.m in Sources */,
+				0B7061C623EE9443009D3233 /* TChatViewController.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				0B7061C323EE93F7009D3233 /* RootViewController.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				0BB116A023EC65A30079CEE8 /* TChatViewController.m in Sources */,
-				0BB5702523EDBEFE000DAF06 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		13B07FB11A68108700A75B9A /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				13B07FB21A68108700A75B9A /* Base */,
-			);
-			name = LaunchScreen.xib;
-			path = TBears;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
