@@ -41,10 +41,10 @@
 		06C997CDAFDF47F2852473AE /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/native-base/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		0BB1169A23EC63B50079CEE8 /* RNBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RNBridge.h; path = TBears/RNBridge.h; sourceTree = "<group>"; };
 		0BB1169B23EC63B50079CEE8 /* RNBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RNBridge.m; path = TBears/RNBridge.m; sourceTree = "<group>"; };
-		0BB1169E23EC65A30079CEE8 /* TChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TChatViewController.h; path = TBears/TChatViewController.h; sourceTree = "<group>"; };
-		0BB1169F23EC65A30079CEE8 /* TChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TChatViewController.m; path = TBears/TChatViewController.m; sourceTree = "<group>"; };
-		0BB5702323EDBEFE000DAF06 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = TBears/RootViewController.h; sourceTree = "<group>"; };
-		0BB5702423EDBEFE000DAF06 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = TBears/RootViewController.m; sourceTree = "<group>"; };
+		0BB1169E23EC65A30079CEE8 /* TChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TChatViewController.h; sourceTree = "<group>"; };
+		0BB1169F23EC65A30079CEE8 /* TChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TChatViewController.m; sourceTree = "<group>"; };
+		0BB5702323EDBEFE000DAF06 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		0BB5702423EDBEFE000DAF06 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* TBears.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBears.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TBears/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = TBears/AppDelegate.m; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0BB1169D23EC65470079CEE8 /* Controllers */ = {
+		0BB5702623EE8349000DAF06 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				0BB1169E23EC65A30079CEE8 /* TChatViewController.h */,
@@ -97,13 +97,13 @@
 				0BB5702323EDBEFE000DAF06 /* RootViewController.h */,
 				0BB5702423EDBEFE000DAF06 /* RootViewController.m */,
 			);
-			name = Controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		13B07FAE1A68108700A75B9A /* TBears */ = {
 			isa = PBXGroup;
 			children = (
-				0BB1169D23EC65470079CEE8 /* Controllers */,
+				0BB5702623EE8349000DAF06 /* Controllers */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
