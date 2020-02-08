@@ -16,6 +16,13 @@
     [navBar setShadowImage:[UIImage imageWithColor:[UIColor colorWithHexString:@"#f2f2f2"]]];
 }
 
+- (void)viewDidLoad {
+    __weak typeof(self) weakself = self;
+    if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        self.interactivePopGestureRecognizer.delegate = (id)weakself;
+    }
+}
+
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     [super pushViewController:viewController animated:animated];
     
