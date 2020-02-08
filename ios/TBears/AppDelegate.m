@@ -16,7 +16,7 @@
     RootViewController *rootViewController = [RootViewController new];
     [rootViewController setView:rootView];
     
-    [self setNavController:[[UINavigationController alloc] initWithRootViewController:rootViewController]];
+    [self setNavController:[[TNavigationController alloc] initWithRootViewController:rootViewController]];
     
     [self setWindow:[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds]];
     [[self window] setRootViewController:[self navController]];
