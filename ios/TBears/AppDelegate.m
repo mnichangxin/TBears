@@ -1,5 +1,5 @@
 #import "AppDelegate.h"
-#import "RootViewController.h"
+#import "TRootViewController.h"
 
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
@@ -19,7 +19,7 @@
     
     [rootView setBackgroundColor:[[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1]];
     
-    RootViewController *rootViewController = [RootViewController new];
+    TRootViewController *rootViewController = [TRootViewController new];
     [rootViewController setView:rootView];
     
     [self setNavController:[[TNavigationController alloc] initWithRootViewController:rootViewController]];

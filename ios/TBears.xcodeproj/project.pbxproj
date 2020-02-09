@@ -12,9 +12,12 @@
 		0B6E6AA823EEAD11002171BE /* TNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E6AA723EEAD11002171BE /* TNavigationController.m */; };
 		0B6E6AAC23EEF374002171BE /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E6AAB23EEF374002171BE /* UIColor+Hex.m */; };
 		0B6E6AAF23EEFBC9002171BE /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E6AAE23EEFBC9002171BE /* UIImage+Color.m */; };
-		0B7061C323EE93F7009D3233 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7061C223EE93F7009D3233 /* RootViewController.m */; };
+		0B7061C323EE93F7009D3233 /* TRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7061C223EE93F7009D3233 /* TRootViewController.m */; };
 		0B7061C623EE9443009D3233 /* TChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7061C523EE9443009D3233 /* TChatViewController.m */; };
 		0BB1169C23EC63B50079CEE8 /* RNBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1169B23EC63B50079CEE8 /* RNBridge.m */; };
+		0BFACC2023F0480700D941F1 /* TChatMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFACC1F23F0480700D941F1 /* TChatMessageViewController.m */; };
+		0BFACC2323F0484900D941F1 /* TChatBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFACC2223F0484900D941F1 /* TChatBoxViewController.m */; };
+		0BFACC2723F05F2800D941F1 /* TChatBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFACC2623F05F2800D941F1 /* TChatBoxView.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -47,12 +50,20 @@
 		0B6E6AAB23EEF374002171BE /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		0B6E6AAD23EEFBC9002171BE /* UIImage+Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
 		0B6E6AAE23EEFBC9002171BE /* UIImage+Color.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
-		0B7061C123EE93F7009D3233 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		0B7061C223EE93F7009D3233 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		0B6E6AB623F03F14002171BE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		0B6E6AB723F03F46002171BE /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		0B7061C123EE93F7009D3233 /* TRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRootViewController.h; sourceTree = "<group>"; };
+		0B7061C223EE93F7009D3233 /* TRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRootViewController.m; sourceTree = "<group>"; };
 		0B7061C423EE9443009D3233 /* TChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TChatViewController.h; sourceTree = "<group>"; };
 		0B7061C523EE9443009D3233 /* TChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TChatViewController.m; sourceTree = "<group>"; };
 		0BB1169A23EC63B50079CEE8 /* RNBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNBridge.h; sourceTree = "<group>"; };
 		0BB1169B23EC63B50079CEE8 /* RNBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNBridge.m; sourceTree = "<group>"; };
+		0BFACC1E23F0480700D941F1 /* TChatMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TChatMessageViewController.h; sourceTree = "<group>"; };
+		0BFACC1F23F0480700D941F1 /* TChatMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TChatMessageViewController.m; sourceTree = "<group>"; };
+		0BFACC2123F0484900D941F1 /* TChatBoxViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TChatBoxViewController.h; sourceTree = "<group>"; };
+		0BFACC2223F0484900D941F1 /* TChatBoxViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TChatBoxViewController.m; sourceTree = "<group>"; };
+		0BFACC2523F05F2800D941F1 /* TChatBoxView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TChatBoxView.h; sourceTree = "<group>"; };
+		0BFACC2623F05F2800D941F1 /* TChatBoxView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TChatBoxView.m; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* TBears.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBears.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -96,13 +107,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B6E6AA523EEA751002171BE /* BaseClass */ = {
+		0B6E6AA523EEA751002171BE /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				0B6E6AA623EEAD11002171BE /* TNavigationController.h */,
 				0B6E6AA723EEAD11002171BE /* TNavigationController.m */,
 			);
-			path = BaseClass;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		0B6E6AA923EEF2CC002171BE /* Category */ = {
@@ -119,10 +130,9 @@
 		0B7061C023EE93BC009D3233 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0B7061C123EE93F7009D3233 /* RootViewController.h */,
-				0B7061C223EE93F7009D3233 /* RootViewController.m */,
-				0B7061C423EE9443009D3233 /* TChatViewController.h */,
-				0B7061C523EE9443009D3233 /* TChatViewController.m */,
+				0BFACC1C23F0456700D941F1 /* Chat */,
+				0B7061C123EE93F7009D3233 /* TRootViewController.h */,
+				0B7061C223EE93F7009D3233 /* TRootViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -130,19 +140,52 @@
 		0BD9E44F23EE9AB400CDD17B /* TBears */ = {
 			isa = PBXGroup;
 			children = (
-				0B6E6AA923EEF2CC002171BE /* Category */,
-				0B6E6AA523EEA751002171BE /* BaseClass */,
-				0B7061C023EE93BC009D3233 /* Controller */,
-				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				0B6E6AA523EEA751002171BE /* Common */,
+				0B6E6AA923EEF2CC002171BE /* Category */,
+				0BFACC1D23F0479A00D941F1 /* Model */,
+				0BFACC2423F05EB600D941F1 /* VIew */,
+				0B7061C023EE93BC009D3233 /* Controller */,
+				0B6E6AB723F03F46002171BE /* Header.h */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
+				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				0B6E6AB623F03F14002171BE /* PrefixHeader.pch */,
 				0BB1169A23EC63B50079CEE8 /* RNBridge.h */,
 				0BB1169B23EC63B50079CEE8 /* RNBridge.m */,
 			);
 			path = TBears;
+			sourceTree = "<group>";
+		};
+		0BFACC1C23F0456700D941F1 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				0B7061C423EE9443009D3233 /* TChatViewController.h */,
+				0B7061C523EE9443009D3233 /* TChatViewController.m */,
+				0BFACC1E23F0480700D941F1 /* TChatMessageViewController.h */,
+				0BFACC1F23F0480700D941F1 /* TChatMessageViewController.m */,
+				0BFACC2123F0484900D941F1 /* TChatBoxViewController.h */,
+				0BFACC2223F0484900D941F1 /* TChatBoxViewController.m */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
+		0BFACC1D23F0479A00D941F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0BFACC2423F05EB600D941F1 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				0BFACC2523F05F2800D941F1 /* TChatBoxView.h */,
+				0BFACC2623F05F2800D941F1 /* TChatBoxView.m */,
+			);
+			path = VIew;
 			sourceTree = "<group>";
 		};
 		2020B875ACCFB5571F09EA7A /* Pods */ = {
@@ -364,14 +407,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BFACC2723F05F2800D941F1 /* TChatBoxView.m in Sources */,
 				0B6E6AA823EEAD11002171BE /* TNavigationController.m in Sources */,
 				0BB1169C23EC63B50079CEE8 /* RNBridge.m in Sources */,
 				0B7061C623EE9443009D3233 /* TChatViewController.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				0B6E6AAC23EEF374002171BE /* UIColor+Hex.m in Sources */,
+				0BFACC2323F0484900D941F1 /* TChatBoxViewController.m in Sources */,
 				0B6E6AAF23EEFBC9002171BE /* UIImage+Color.m in Sources */,
-				0B7061C323EE93F7009D3233 /* RootViewController.m in Sources */,
+				0B7061C323EE93F7009D3233 /* TRootViewController.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				0BFACC2023F0480700D941F1 /* TChatMessageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +498,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/lichangxin/Project/TBears/ios/TBears/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -503,6 +551,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

@@ -1,7 +1,7 @@
-#import "RootViewController.h"
+#import "TRootViewController.h"
 #import "AppDelegate.h"
 
-@implementation RootViewController
+@implementation TRootViewController
 
 - (void)viewWillAppear:(BOOL)animated {
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
