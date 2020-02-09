@@ -77,7 +77,10 @@ export default props => {
 
     const goTChat = () => {
         const RNBridge = NativeModules.RNBridge
-        RNBridge.jumpNativePage()
+        RNBridge.jumpNativePage({
+            name: 'chat',
+            params: null
+        })
     }
 
     const NoticeTab = () => (
