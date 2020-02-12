@@ -145,7 +145,7 @@
 				0B6E6AA523EEA751002171BE /* Common */,
 				0B6E6AA923EEF2CC002171BE /* Category */,
 				0BFACC1D23F0479A00D941F1 /* Model */,
-				0BFACC2423F05EB600D941F1 /* VIew */,
+				0BFACC2423F05EB600D941F1 /* View */,
 				0B7061C023EE93BC009D3233 /* Controller */,
 				0B6E6AB723F03F46002171BE /* Header.h */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -179,13 +179,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		0BFACC2423F05EB600D941F1 /* VIew */ = {
+		0BFACC2423F05EB600D941F1 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				0BFACC2523F05F2800D941F1 /* TChatBoxView.h */,
 				0BFACC2623F05F2800D941F1 /* TChatBoxView.m */,
 			);
-			path = VIew;
+			path = View;
 			sourceTree = "<group>";
 		};
 		2020B875ACCFB5571F09EA7A /* Pods */ = {

@@ -16,8 +16,9 @@
 }
 
 - (TChatBoxView *) tCBoxView {
+//    [[tCBoxVC view] setBackgroundColor:[UIColor colorWithHexString:@"#f2f2f2"]];
     if (_tCBoxView == nil) {
-//        _tCBoxView =  [[TChatBoxView alloc] initWithFrame:CGRectMake(0, kScreenHeight - kTabbarHeight, kScreenWidth, kTabbarHeight)];
+        _tCBoxView =  [[TChatBoxView alloc] initWithFrame:CGRectMake(0, kScreenHeight - kTabbarHeight, kScreenWidth, kTabbarHeight)];
     }
     return _tCBoxView;
 }

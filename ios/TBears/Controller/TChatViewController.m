@@ -38,8 +38,6 @@
 }
 
 - (TChatBoxViewController *) tCBoxVC {
-//    [[tCBoxVC view] setBackgroundColor:[UIColor colorWithHexString:@"#f2f2f2"]];
-
     if (_tCBoxVC == nil) {
         _tCBoxVC = [TChatBoxViewController new];
         [[_tCBoxVC view] setFrame:CGRectMake(0, kScreenHeight - kTabbarHeight, kScreenWidth, kScreenHeight)];
