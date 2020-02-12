@@ -159,6 +159,15 @@
 			path = TBears;
 			sourceTree = "<group>";
 		};
+		0BE5575A23F45FA600B37D41 /* ChatBox */ = {
+			isa = PBXGroup;
+			children = (
+				0BFACC2523F05F2800D941F1 /* TChatBoxView.h */,
+				0BFACC2623F05F2800D941F1 /* TChatBoxView.m */,
+			);
+			path = ChatBox;
+			sourceTree = "<group>";
+		};
 		0BFACC1C23F0456700D941F1 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,8 +191,7 @@
 		0BFACC2423F05EB600D941F1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0BFACC2523F05F2800D941F1 /* TChatBoxView.h */,
-				0BFACC2623F05F2800D941F1 /* TChatBoxView.m */,
+				0BE5575A23F45FA600B37D41 /* ChatBox */,
 			);
 			path = View;
 			sourceTree = "<group>";

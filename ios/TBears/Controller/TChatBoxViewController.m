@@ -11,14 +11,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     [[self view] addSubview:[self tCBoxView]];
 }
 
 - (TChatBoxView *) tCBoxView {
-//    [[tCBoxVC view] setBackgroundColor:[UIColor colorWithHexString:@"#f2f2f2"]];
     if (_tCBoxView == nil) {
-        _tCBoxView =  [[TChatBoxView alloc] initWithFrame:CGRectMake(0, kScreenHeight - kTabbarHeight, kScreenWidth, kTabbarHeight)];
+        _tCBoxView =  [[TChatBoxView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kTabbarHeight)];
     }
     return _tCBoxView;
 }
