@@ -1,6 +1,7 @@
 #import "TChatViewController.h"
 #import "TChatMessageViewController.h"
 #import "TChatBoxViewController.h"
+#import "UIColor+Hex.h"
 
 @interface TChatViewController ()
 
@@ -40,7 +41,8 @@
 - (TChatBoxViewController *) tCBoxVC {
     if (_tCBoxVC == nil) {
         _tCBoxVC = [TChatBoxViewController new];
-        [[_tCBoxVC view] setFrame:CGRectMake(0, kScreenHeight - kTabbarHeight, kScreenWidth, kScreenHeight)];
+        [[_tCBoxVC view] setFrame:CGRectMake(0, kScreenHeight - (kChatBoxHeight + kSafeAreaBottomHeight), kScreenWidth, kScreenHeight)];
+        [[_tCBoxVC view] setBackgroundColor:[UIColor colorWithHexString:@"#ffffff"]];
     }
     return _tCBoxVC;
 }

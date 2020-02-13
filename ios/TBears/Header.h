@@ -10,7 +10,7 @@
 // 屏幕宽度
 #define kScreenWidth            [[UIScreen mainScreen] bounds].size.width
 // 状态栏高度
-#define kStatusBarHeigh         UIApplication.sharedApplication.statusBarFrame.size.height
+#define kStatusBarHeight        UIApplication.sharedApplication.statusBarFrame.size.height
 // 顶部导航栏高度
 #define kNavigationBarHeight    44.f
 // 状态栏高度 + 顶部导航栏高度
@@ -20,5 +20,9 @@
 // Tabbar高度
 #define kTabbarHeight           (kIS_iPhoneX ? 85.f : 34.f)
 
-#endif
+#pragma mark - 聊天界面相关
 
+// 聊天框高度
+#define kChatBoxHeight          kScreenHeight * 0.128
+
+#endif

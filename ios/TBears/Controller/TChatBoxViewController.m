@@ -17,7 +17,7 @@
 
 - (TChatBoxView *) tCBoxView {
     if (_tCBoxView == nil) {
-        _tCBoxView =  [[TChatBoxView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kTabbarHeight)];
+        _tCBoxView =  [[TChatBoxView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kChatBoxHeight)];
     }
     return _tCBoxView;
 }
