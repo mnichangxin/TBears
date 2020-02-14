@@ -1,16 +1,17 @@
 #import "TChatBoxView.h"
 #import "UIColor+Hex.h"
 
-#define  kTextViewWidth   kScreenWidth * 0.72
+#define  kTextViewWidth   kScreenWidth * 0.9
 #define  kTextViewHeight  kChatBoxHeight * 0.38
-#define  kToolBarHeight   kChatBoxHeight * 0.48
 #define  kTextViewMargin  kScreenWidth * 0.05
+#define  kToolBarHeight   kChatBoxHeight * 0.48
 
-@interface TChatBoxView ()
+@interface TChatBoxView ()<UITextViewDelegate>
 
 @property (nonatomic, strong) UIView *topLine;
 @property (nonatomic, strong) UITextView *textView;
 @property (nonatomic, strong) UIButton *sendButton;
+@property (nonatomic, assign) ChatBoxStatus status;
 
 @end
 
@@ -22,10 +23,28 @@
         [self setBackgroundColor:[UIColor colorWithHexString:@"#ffffff"]];
         [self addSubview:[self topLine]];
         [self addSubview:[self textView]];
-        [self addSubview:[self sendButton]];
+        [self setStatus:ChatBoxNotingStatus];
     }
     return self;
 }
+
+#pragma mark - UITextViewDelegate
+
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    ChatBoxStatus fromStatus = [self status];
+    
+    [self setStatus:ChatBoxShowKeyboard];
+    
+    if (_delegate && [_delegate respondsToSelector:@selector(chatBox:changeStatusFrom:to:)]) {
+        [_delegate chatBox:self changeStatusFrom:fromStatus to:[self status]];
+    }
+}
+
+- (void)textViewDidChange:(UITextView *)textView {
+    NSLog(@"Did change...");
+}
+
+#pragma mark - Getter
 
 - (UIView *) topLine {
     if (_topLine == nil) {
@@ -40,9 +59,13 @@
         _textView = [[UITextView alloc] initWithFrame:CGRectMake(kTextViewMargin, kChatBoxHeight - kTextViewHeight - kToolBarHeight,                                                            kTextViewWidth, kTextViewHeight)];
         [_textView setBackgroundColor:[UIColor colorWithHexString:@"#f2f2f2"]];
         [_textView setTextColor:[UIColor colorWithHexString:@"#333333"]];
+        [_textView setTextAlignment:NSTextAlignmentLeft];
+        [_textView setFont:[UIFont systemFontOfSize:16.f]];
+        [_textView setContentInset:UIEdgeInsetsMake(kTextViewHeight * 0.1, kTextViewWidth * 0.03, 0, kTextViewWidth * 0.03)];
         [_textView.layer setBorderWidth:1.f];
         [_textView.layer setBorderColor:[[UIColor colorWithHexString:@"#f2f2f2"] CGColor]];
         [_textView.layer setCornerRadius:20.f];
+        [_textView setDelegate:self];
     }
     return _textView;
 }

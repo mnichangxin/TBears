@@ -173,10 +173,10 @@
 			children = (
 				0B7061C423EE9443009D3233 /* TChatViewController.h */,
 				0B7061C523EE9443009D3233 /* TChatViewController.m */,
-				0BFACC1E23F0480700D941F1 /* TChatMessageViewController.h */,
-				0BFACC1F23F0480700D941F1 /* TChatMessageViewController.m */,
 				0BFACC2123F0484900D941F1 /* TChatBoxViewController.h */,
 				0BFACC2223F0484900D941F1 /* TChatBoxViewController.m */,
+				0BFACC1E23F0480700D941F1 /* TChatMessageViewController.h */,
+				0BFACC1F23F0480700D941F1 /* TChatMessageViewController.m */,
 			);
 			name = Chat;
 			sourceTree = "<group>";
