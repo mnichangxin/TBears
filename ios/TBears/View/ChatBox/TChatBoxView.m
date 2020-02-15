@@ -29,7 +29,7 @@
 
 @implementation TChatBoxView
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype) initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         [self setBackgroundColor:[UIColor colorWithHexString:@"#ffffff"]];
@@ -41,9 +41,14 @@
     return self;
 }
 
+- (BOOL) resignFirstResponder {
+    [[self textView] resignFirstResponder];
+    return [super resignFirstResponder];
+}
+
 #pragma mark - UITextViewDelegate
 
-- (void)textViewDidBeginEditing:(UITextView *)textView {
+- (void) textViewDidBeginEditing:(UITextView *)textView {
     ChatBoxStatus fromStatus = [self status];
     
     [self setStatus:ChatBoxShowKeyboard];
@@ -53,7 +58,22 @@
     }
 }
 
-- (void)textViewDidChange:(UITextView *)textView {
+#pragma mark - Methods
+
+- (void) faceButtonTouch {
+    ChatBoxStatus fromStatus = [self status];
+    
+    if (fromStatus == ChatBoxShowFaceStatus) {
+        [self setStatus:ChatBoxShowKeyboard];
+        [[self textView] becomeFirstResponder];
+    } else {
+        [self setStatus:ChatBoxShowFaceStatus];
+        [[self textView] resignFirstResponder];
+    }
+    
+    if (_delegate && [_delegate respondsToSelector:@selector(tChatBoxView:changeStatusFrom:to:)]) {
+        [_delegate tChatBoxView:self changeStatusFrom:fromStatus to:[self status]];
+    }
 }
 
 #pragma mark - Getter
@@ -124,6 +144,7 @@
     if (_faceButton == nil) {
         _faceButton = [[UIButton alloc] initWithFrame:CGRectMake(kToolBarPaddingLeft + 2 * kToolBarItemMarginLeft, kToolBarPaddingTop, kToolBarItemSize, kToolBarItemSize)];
         [_faceButton setImage:[UIImage imageNamed:@"tCFace"] forState:UIControlStateNormal];
+        [_faceButton addTarget:self action:@selector(faceButtonTouch) forControlEvents:UIControlEventTouchUpInside];
     }
     return _faceButton;
 }

@@ -3,7 +3,7 @@
 
 #pragma mark - 屏幕坐标、尺寸相关
 
-// 判断是否iPhone
+// 判断是否 iPhone X 系列
 #define kIS_iPhoneX             UIApplication.sharedApplication.statusBarFrame.size.height > 20
 // 屏幕高度
 #define kScreenHeight           [[UIScreen mainScreen] bounds].size.height
@@ -17,7 +17,7 @@
 #define kSafeAreaTopHeight      (UIApplication.sharedApplication.statusBarFrame.size.height + 44)
 // 底部安全距离
 #define kSafeAreaBottomHeight   (kIS_iPhoneX ? 34.f : 0.f)
-// Tabbar高度
+// Tabbar 高度
 #define kTabbarHeight           (kIS_iPhoneX ? 85.f : 34.f)
 
 #pragma mark - 聊天界面相关
