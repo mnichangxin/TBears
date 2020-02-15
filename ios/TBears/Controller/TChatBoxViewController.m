@@ -1,7 +1,7 @@
 #import "TChatBoxViewController.h"
 #import "TChatBoxView.h"
 
-@interface TChatBoxViewController ()<TChatBoxDelegate>
+@interface TChatBoxViewController ()<TChatBoxViewDelegate>
 
 @property (nonatomic, strong) TChatBoxView *tCBoxView;
 
@@ -16,11 +16,17 @@
 }
 
 #pragma mark - TChatBoxDelegate
-- (void)chatBox:(TChatBoxView *)chatBox changeStatusFrom:(ChatBoxStatus)fromStatus to:(ChatBoxStatus)toStatus {
+
+- (void)tChatBoxView:(TChatBoxView *)tChatBoxView changeStatusFrom:(ChatBoxStatus)fromStatus to:(ChatBoxStatus)toStatus {
     if (toStatus == ChatBoxShowKeyboard) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        });
+        if (_delegate && [_delegate respondsToSelector:@selector(tChatBoxVC:didChangeHeight:)]) {
+            [_delegate tChatBoxVC:self didChangeHeight:350.f];
+        }
     }
+}
+
+- (void)tChatBoxView:(TChatBoxView *)tChatBoxView changeTChatBoxViewHeight:(CGFloat)tChatBoxViewHeight {
+    
 }
 
 #pragma mark - Getter

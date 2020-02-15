@@ -9,16 +9,16 @@ typedef NS_ENUM(NSInteger, ChatBoxStatus) {
 };
 
 @class TChatBoxView;
-@protocol TChatBoxDelegate <NSObject>
+@protocol TChatBoxViewDelegate <NSObject>
 
-- (void)chatBox:(TChatBoxView *)chatBox changeStatusFrom:(ChatBoxStatus)fromStatus to:(ChatBoxStatus)toStatus;
-- (void)chatBox:(TChatBoxView *)chatBox changeChatBoxHeight:(CGFloat) chatBoxHeight;
+- (void)tChatBoxView:(TChatBoxView *)tChatBoxView changeStatusFrom:(ChatBoxStatus)fromStatus to:(ChatBoxStatus)toStatus;
+- (void)tChatBoxView:(TChatBoxView *)tChatBoxView changeTChatBoxViewHeight:(CGFloat)tChatBoxViewHeight;
 
 @end
 
 @interface TChatBoxView : UIView
 
-@property (nonatomic, weak) id<TChatBoxDelegate> delegate;
+@property (nonatomic, weak) id<TChatBoxViewDelegate> delegate;
 
 @end
 

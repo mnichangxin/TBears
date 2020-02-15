@@ -3,7 +3,7 @@
 #import "TChatBoxViewController.h"
 #import "UIColor+Hex.h"
 
-@interface TChatViewController ()
+@interface TChatViewController ()<TChatBoxViewControllerDelegate>
 
 @property (nonatomic, strong) TChatMessageViewController *tCMessageVC;
 @property (nonatomic, strong) TChatBoxViewController *tCBoxVC;
@@ -30,6 +30,15 @@
     [navItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"更多" style:UIBarButtonItemStylePlain target:self action:nil]];
 }
 
+#pragma mark - TChatBoxViewControllerDelegate
+
+- (void)tChatBoxVC:(TChatBoxViewController *)tChatBoxVC didChangeHeight:(CGFloat)height {
+    CGRect lastFrame = [[_tCBoxVC view] frame];
+    [[_tCBoxVC view] setFrame:CGRectMake(lastFrame.origin.x, lastFrame.origin.y - height, lastFrame.size.width, lastFrame.size.height)];
+}
+
+#pragma mark - Getter
+
 - (TChatMessageViewController *) tCMessageVC {
     if (_tCMessageVC == nil) {
         _tCMessageVC = [TChatMessageViewController new];
@@ -43,6 +52,7 @@
         _tCBoxVC = [TChatBoxViewController new];
         [[_tCBoxVC view] setFrame:CGRectMake(0, kScreenHeight - (kChatBoxHeight + kSafeAreaBottomHeight), kScreenWidth, kScreenHeight)];
         [[_tCBoxVC view] setBackgroundColor:[UIColor colorWithHexString:@"#ffffff"]];
+        [_tCBoxVC setDelegate:self];
     }
     return _tCBoxVC;
 }
