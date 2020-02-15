@@ -29,7 +29,7 @@
     UINavigationItem *navItem = [viewController navigationItem];
     
     if (navItem.leftBarButtonItem == nil && self.viewControllers.count >= 1) {
-        [navItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(popSelf)]];
+        [navItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"navBarBack"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(popSelf)]];
     }
 }
 

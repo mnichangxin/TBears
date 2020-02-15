@@ -6,12 +6,12 @@
 #define  kTextViewMarginLeft    kScreenWidth * 0.05
 #define  kTextViewMarginTop     kChatBoxHeight * 0.137
 
-#define  kToolBarWidth          kScreenWidth * 0.715
+#define  kToolBarWidth          kScreenWidth * 0.9
 #define  kToolBarHeight         kChatBoxHeight * 0.48
 #define  kToolBarPaddingTop     kToolBarHeight * 0.28
 #define  kToolBarPaddingLeft    kToolBarWidth * 0.07
 #define  kToolBarItemSize       kToolBarHeight * 0.54
-#define  kToolBarItemMarginLeft kToolBarWidth * 0.19
+#define  kToolBarItemMarginLeft kToolBarWidth * 0.265
 
 @interface TChatBoxView ()<UITextViewDelegate>
 
