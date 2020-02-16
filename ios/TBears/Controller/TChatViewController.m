@@ -1,8 +1,9 @@
 #import "TChatViewController.h"
 #import "TChatMessageViewController.h"
 #import "TChatBoxViewController.h"
+#import "UIColor+Hex.h"
 
-@interface TChatViewController ()
+@interface TChatViewController ()<TChatBoxViewControllerDelegate, TChatMessageViewControllerDelegate>
 
 @property (nonatomic, strong) TChatMessageViewController *tCMessageVC;
 @property (nonatomic, strong) TChatBoxViewController *tCBoxVC;
@@ -11,7 +12,7 @@
 
 @implementation TChatViewController
 
-- (void)viewDidLoad {
+- (void) viewDidLoad {
     [super viewDidLoad];
     [self setNavigationItem];
     
@@ -26,23 +27,39 @@
     UINavigationItem *navItem = [self navigationItem];
     
     [navItem setTitle:@"聊天"];
-    [navItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"更多" style:UIBarButtonItemStylePlain target:self action:nil]];
+    [navItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navBarMore"] style:UIBarButtonItemStylePlain target:self action:nil]];
 }
+
+#pragma mark - TChatBoxViewControllerDelegate
+
+- (void) tChatBoxVC:(TChatBoxViewController *)tChatBoxVC didChangeHeight:(CGFloat)height {
+    CGRect lastFrame = [[_tCBoxVC view] frame];
+    [[_tCBoxVC view] setFrame:CGRectMake(lastFrame.origin.x, kScreenHeight - height, lastFrame.size.width, lastFrame.size.height)];
+}
+
+#pragma mark - TChatMessageViewControllerDelegate
+
+- (void) didTouchTChatMessageView:(TChatMessageViewController *)tChatMessageVC {
+    [[self tCBoxVC] resignFirstResponder];
+}
+
+#pragma mark - Getter
 
 - (TChatMessageViewController *) tCMessageVC {
     if (_tCMessageVC == nil) {
         _tCMessageVC = [TChatMessageViewController new];
         [[_tCMessageVC view] setFrame:CGRectMake(0, kSafeAreaTopHeight, kScreenWidth, kScreenHeight - kSafeAreaTopHeight)];
+        [_tCMessageVC setDelegate:self];
     }
     return _tCMessageVC;
 }
 
 - (TChatBoxViewController *) tCBoxVC {
-//    [[tCBoxVC view] setBackgroundColor:[UIColor colorWithHexString:@"#f2f2f2"]];
-
     if (_tCBoxVC == nil) {
         _tCBoxVC = [TChatBoxViewController new];
-        [[_tCBoxVC view] setFrame:CGRectMake(0, kScreenHeight - kTabbarHeight, kScreenWidth, kScreenHeight)];
+        [[_tCBoxVC view] setFrame:CGRectMake(0, kScreenHeight - (kChatBoxHeight + kSafeAreaBottomHeight), kScreenWidth, kScreenHeight)];
+        [[_tCBoxVC view] setBackgroundColor:[UIColor colorWithHexString:@"#ffffff"]];
+        [_tCBoxVC setDelegate:self];
     }
     return _tCBoxVC;
 }

@@ -145,7 +145,7 @@
 				0B6E6AA523EEA751002171BE /* Common */,
 				0B6E6AA923EEF2CC002171BE /* Category */,
 				0BFACC1D23F0479A00D941F1 /* Model */,
-				0BFACC2423F05EB600D941F1 /* VIew */,
+				0BFACC2423F05EB600D941F1 /* View */,
 				0B7061C023EE93BC009D3233 /* Controller */,
 				0B6E6AB723F03F46002171BE /* Header.h */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -159,15 +159,24 @@
 			path = TBears;
 			sourceTree = "<group>";
 		};
+		0BE5575A23F45FA600B37D41 /* ChatBox */ = {
+			isa = PBXGroup;
+			children = (
+				0BFACC2523F05F2800D941F1 /* TChatBoxView.h */,
+				0BFACC2623F05F2800D941F1 /* TChatBoxView.m */,
+			);
+			path = ChatBox;
+			sourceTree = "<group>";
+		};
 		0BFACC1C23F0456700D941F1 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
 				0B7061C423EE9443009D3233 /* TChatViewController.h */,
 				0B7061C523EE9443009D3233 /* TChatViewController.m */,
-				0BFACC1E23F0480700D941F1 /* TChatMessageViewController.h */,
-				0BFACC1F23F0480700D941F1 /* TChatMessageViewController.m */,
 				0BFACC2123F0484900D941F1 /* TChatBoxViewController.h */,
 				0BFACC2223F0484900D941F1 /* TChatBoxViewController.m */,
+				0BFACC1E23F0480700D941F1 /* TChatMessageViewController.h */,
+				0BFACC1F23F0480700D941F1 /* TChatMessageViewController.m */,
 			);
 			name = Chat;
 			sourceTree = "<group>";
@@ -179,13 +188,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		0BFACC2423F05EB600D941F1 /* VIew */ = {
+		0BFACC2423F05EB600D941F1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0BFACC2523F05F2800D941F1 /* TChatBoxView.h */,
-				0BFACC2623F05F2800D941F1 /* TChatBoxView.m */,
+				0BE5575A23F45FA600B37D41 /* ChatBox */,
 			);
-			path = VIew;
+			path = View;
 			sourceTree = "<group>";
 		};
 		2020B875ACCFB5571F09EA7A /* Pods */ = {
