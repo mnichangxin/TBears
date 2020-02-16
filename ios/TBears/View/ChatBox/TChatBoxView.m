@@ -92,6 +92,7 @@
         [_textView setBackgroundColor:[UIColor colorWithHexString:@"#f2f2f2"]];
         [_textView setTextColor:[UIColor colorWithHexString:@"#333333"]];
         [_textView setTextAlignment:NSTextAlignmentLeft];
+        [_textView setReturnKeyType:UIReturnKeySend];
         [_textView setFont:[UIFont systemFontOfSize:16.f]];
         [_textView setContentInset:UIEdgeInsetsMake(kTextViewHeight * 0.1, kTextViewWidth * 0.03, 0, kTextViewWidth * 0.03)];
         [_textView.layer setBorderWidth:1.f];

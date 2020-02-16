@@ -16,6 +16,26 @@
     [[self view] addGestureRecognizer:[self tapGR]];
 }
 
+#pragma mark - UITableViewDelegate
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 5;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
+    
+    [[cell imageView] setImage:[UIImage imageNamed:@"navBarBack"]];
+    [[cell textLabel] setText:@"王二麻子"];
+    [[cell detailTextLabel] setText:@"你好你好你好"];
+    
+    return cell;
+}
+
 #pragma mark - Methods
 
 - (void) didTapView {

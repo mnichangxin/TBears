@@ -8,7 +8,7 @@
 
 @end
 
-@interface TChatMessageViewController : UIViewController
+@interface TChatMessageViewController : UITableViewController
 
 @property (nonatomic, weak) id<TChatMessageViewControllerDelegate> delegate;
 
