@@ -4,6 +4,7 @@ import InteractiveNotification from '@views/notice/interactiveNotification'
 import ActivityList from '@views/notice/activityList'
 import FriendsList from '@views/notice/friendsList'
 import AddFriends from '@views/notice/addFriends'
+import QrCode from '@views/qrCode'
 
 export default {
     MainTab: {
@@ -23,5 +24,8 @@ export default {
     },
     AddFriends: {
         screen: AddFriends
+    },
+    Mine:{
+        screen:QrCode
     }
 }
