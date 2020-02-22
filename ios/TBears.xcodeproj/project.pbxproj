@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		02AD445F5C2B4BC19F68328D /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06C997CDAFDF47F2852473AE /* Fontisto.ttf */; };
 		087CE9DCB40248FD8A6FC8C9 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC719B7B74734243B38DAEEB /* Feather.ttf */; };
+		0B582C1624016C0A00B3BD48 /* UIView+TL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B582C1524016C0A00B3BD48 /* UIView+TL.m */; };
 		0B6E6AA823EEAD11002171BE /* TNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E6AA723EEAD11002171BE /* TNavigationController.m */; };
 		0B6E6AAC23EEF374002171BE /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E6AAB23EEF374002171BE /* UIColor+Hex.m */; };
 		0B6E6AAF23EEFBC9002171BE /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E6AAE23EEFBC9002171BE /* UIImage+Color.m */; };
@@ -48,6 +49,8 @@
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; name = main.jsbundle; path = ../main.jsbundle; sourceTree = "<group>"; };
 		06C997CDAFDF47F2852473AE /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/native-base/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
+		0B582C1424016C0A00B3BD48 /* UIView+TL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+TL.h"; sourceTree = "<group>"; };
+		0B582C1524016C0A00B3BD48 /* UIView+TL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+TL.m"; sourceTree = "<group>"; };
 		0B6E6AA623EEAD11002171BE /* TNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNavigationController.h; sourceTree = "<group>"; };
 		0B6E6AA723EEAD11002171BE /* TNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNavigationController.m; sourceTree = "<group>"; };
 		0B6E6AAA23EEF374002171BE /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 				0B6E6AAB23EEF374002171BE /* UIColor+Hex.m */,
 				0B6E6AAD23EEFBC9002171BE /* UIImage+Color.h */,
 				0B6E6AAE23EEFBC9002171BE /* UIImage+Color.m */,
+				0B582C1424016C0A00B3BD48 /* UIView+TL.h */,
+				0B582C1524016C0A00B3BD48 /* UIView+TL.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -453,6 +458,7 @@
 				0B6E6AAC23EEF374002171BE /* UIColor+Hex.m in Sources */,
 				0BFACC2323F0484900D941F1 /* TChatBoxViewController.m in Sources */,
 				0B6E6AAF23EEFBC9002171BE /* UIImage+Color.m in Sources */,
+				0B582C1624016C0A00B3BD48 /* UIView+TL.m in Sources */,
 				0BC7E5F623F924C700604D1C /* TUserModel.m in Sources */,
 				0B7061C323EE93F7009D3233 /* TRootViewController.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,

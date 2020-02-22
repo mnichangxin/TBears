@@ -3,5 +3,7 @@
 
 @interface TChatMessageTextCell : TChatMessageCell
 
+@property (nonatomic, strong) UILabel *messageTextLabel;
+
 @end
 

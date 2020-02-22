@@ -1,4 +1,7 @@
 #import "TChatMessageViewController.h"
+#import "TChatMessageTextCell.h"
+#import "TMessageModel.h"
+#import "TUserModel.h"
 #import "UIColor+Hex.h"
 
 @interface TChatMessageViewController ()
@@ -14,24 +17,39 @@
     
     [[self view] setBackgroundColor:[UIColor colorWithHexString:@"#fbfbfb"]];
     [[self view] addGestureRecognizer:[self tapGR]];
+//    [[self tableView] setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 }
 
 #pragma mark - UITableViewDelegate
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 5;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellIdentifier=@"UITableViewCellIdentifierKey1";
     
-    [[cell imageView] setImage:[UIImage imageNamed:@"navBarBack"]];
-    [[cell textLabel] setText:@"王二麻子"];
-    [[cell detailTextLabel] setText:@"你好你好你好"];
+    TChatMessageTextCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (!cell) {
+        cell = [[TChatMessageTextCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    TMessageModel *messageModel = [[TMessageModel alloc] init];
+    TUserModel *userModel = [[TUserModel alloc] init];
+    
+    [userModel setNickName:@"lichangxin"];
+    [userModel setAvatarUri:[NSURL URLWithString:@"http://q4pas9fmo.bkt.clouddn.com/group-avatar.png"]];
+    
+    [messageModel setFrom:userModel];
+    [messageModel setOwnerType:TMessageOwnerTypeOther];
+    [messageModel setText:@"1222"];
+
+    [cell setMessageModel:messageModel];
     
     return cell;
 }
