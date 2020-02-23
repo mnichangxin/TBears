@@ -5,6 +5,7 @@
 - (TMessageModel *)initWithDictionary:(NSDictionary *)dic {
     [self setFrom:dic[@"from"]];
     [self setDate:dic[@"date"]];
+    [self setEmissionType:[dic[@"emissionType"] emissionType]];
     [self setMessageType:[dic[@"messageType"] messageType]];
     [self setOwnerType:[dic[@"ownerType"] ownerType]];
     [self setReadState:[dic[@"readState"] readState]];

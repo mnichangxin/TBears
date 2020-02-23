@@ -2,6 +2,11 @@
 #import <MapKit/MapKit.h>
 #import "TUserModel.h"
 
+// 传播方式
+typedef NS_ENUM(NSInteger, TMessageEmissionType) {
+    TMessageSinglecast,
+    TMessageBroadcast
+};
 // 消息类型
 typedef NS_ENUM(NSInteger, TMessageType) {
     TMessageTypeUnknown,
@@ -37,6 +42,7 @@ typedef NS_ENUM(NSInteger, TMessageReadState) {
 #pragma mark - 消息信息
 @property (nonatomic, strong) TUserModel *from; // 发送者信息
 @property (nonatomic, strong) NSDate *date; // 发送时间
+@property (nonatomic, assign) TMessageEmissionType emissionType; // 传播方式
 @property (nonatomic, assign) TMessageType messageType; // 消息类型
 @property (nonatomic, assign) TMessageOwnerType ownerType; // 发送者类型
 @property (nonatomic, assign) TMessageSendState sendState; // 发送状态

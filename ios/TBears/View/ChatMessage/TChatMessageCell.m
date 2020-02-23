@@ -2,6 +2,9 @@
 #import "UIView+TL.h"
 #import "UIColor+Hex.h"
 
+#define kAvatarImageWidth kScreenWidth * (132 / 1080)
+#define kAvatarImageHeight kAvatarImageWidth
+
 @implementation TChatMessageCell
 
 - (instancetype) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
