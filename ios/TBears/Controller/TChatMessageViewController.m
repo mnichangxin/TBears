@@ -54,6 +54,10 @@
     return cell;
 }
 
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return 60.f;
+//}
+
 #pragma mark - Methods
 
 - (void) didTapView {
