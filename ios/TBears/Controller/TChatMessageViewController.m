@@ -42,7 +42,7 @@
     TUserModel *userModel = [[TUserModel alloc] initWithDictionary:@{
         @"userId": @1,
         @"nickname": @"lichangxin",
-        @"avatarUri": [NSURL URLWithString:@"https://source.qunarzz.com/common/hf/logo.png"],
+        @"avatarUri": [NSURL URLWithString:@"https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png"],
     }];
     TMessageModel *messageModel = [[TMessageModel alloc] initWithDictionary:@{
         @"from": userModel,
