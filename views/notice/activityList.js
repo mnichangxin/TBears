@@ -11,7 +11,7 @@ export default props => {
     const data = [{
         key: '1',
         title: '一起来团建',
-        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png',
+        avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png',
         time: '2019-8-12',
         location: '北京市海淀区XXXXXXXX',
         participantsCount: 10,
@@ -19,7 +19,7 @@ export default props => {
     }, {
         key: '2',
         title: '一起来团建',
-        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png',
+        avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png',
         time: '2019-8-12',
         location: '北京市海淀区XXXXXXXX',
         participantsCount: 10,
@@ -27,7 +27,7 @@ export default props => {
     }, {
         key: '3',
         title: '一起来团建',
-        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png',
+        avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png',
         time: '2019-8-12',
         location: '北京市海淀区XXXXXXXX',
         participantsCount: 10,
@@ -69,7 +69,7 @@ export default props => {
             <View style={styles.bodyTop}>
                 <View style={styles.tip}>
                     <Image
-                        source={{ uri: 'http://q4pas9fmo.bkt.clouddn.com/tip.png' }}
+                        source={{ uri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/tip.png' }}
                         style={styles.tipIcon} />
                     <Text style={styles.tipText}>此处只展示关系网内活动</Text>
                 </View>

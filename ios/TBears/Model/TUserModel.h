@@ -2,7 +2,7 @@
 
 @interface TUserModel : NSObject
 
-@property (nonatomic, copy) NSString *userId;
+@property (nonatomic, assign) NSInteger userId;
 @property (nonatomic, copy) NSString *nickName;
 @property (nonatomic, strong) NSURL *avatarUri;
 @property (nonatomic, strong) NSDate *date;

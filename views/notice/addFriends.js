@@ -13,7 +13,7 @@ export default props => {
         <View style={styles.addFriendsNav}>
             <View style={styles.addFriendsSearchWrapper}>
                 <Image
-                    source={{ uri: 'http://q4pas9fmo.bkt.clouddn.com/search.png' }}
+                    source={{ uri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/search.png' }}
                     style={styles.addFriendsSearchIcon} />
                 <TextInput 
                     style={styles.addFriendsSearchInput}
@@ -41,12 +41,12 @@ export default props => {
         key: '2',
         timeline: '近三天',
         data: [{
-            avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png',
+            avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png',
             nickname: '李二麻子',
             verifyMessage: '李二麻子你好',
             verifyStatus: 1
         }, {
-            avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png',
+            avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png',
             nickname: '李二麻子',
             verifyMessage: '李二麻子你好',
             verifyStatus: 1
@@ -55,17 +55,17 @@ export default props => {
         key: '3',
         timeline: '三天前',
         data: [{
-            avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png',
+            avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png',
             nickname: '李二麻子',
             verifyMessage: '李二麻子你好',
             verifyStatus: 1
         }, {
-            avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png',
+            avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png',
             nickname: '李二麻子',
             verifyMessage: '李二麻子你好',
             verifyStatus: 1
         }, {
-            avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png',
+            avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png',
             nickname: '李二麻子',
             verifyMessage: '李二麻子你好',
             verifyStatus: 0

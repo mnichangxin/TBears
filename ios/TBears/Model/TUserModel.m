@@ -3,7 +3,7 @@
 @implementation TUserModel
 
 - (TUserModel *) initWithDictionary:(NSDictionary *)dic {
-    [self setUserId:dic[@"userId"]];
+    [self setUserId:[dic[@"userId"] integerValue]];
     [self setNickName:dic[@"nickName"]];
     [self setAvatarUri:dic[@"avatarUri"]];
     [self setDate:dic[@"date"]];

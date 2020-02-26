@@ -10,15 +10,15 @@ import styles from '@styles/notice/interactiveNotification'
 export default props => {
     const data = [{
         key: '1',
-        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png',
+        avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png',
         activity: '王二麻子点赞了你的动态' 
     }, {
         key: '2',
-        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png',
+        avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png',
         activity: '王二麻子评论了你：真好真好真好' 
     }, {
         key: '3',
-        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png',
+        avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png',
         activity: '王二麻子点赞了你的动态' 
     }]
     const renderInteractiveListItem = data => (

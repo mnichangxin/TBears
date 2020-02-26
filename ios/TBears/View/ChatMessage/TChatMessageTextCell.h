@@ -5,7 +5,5 @@
 
 @property (nonatomic, strong) UILabel *messageTextLabel;
 
-- (void) setMessageModel:(TMessageModel *)messageModel;
-
 @end
 

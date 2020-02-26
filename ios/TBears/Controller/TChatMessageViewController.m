@@ -39,15 +39,16 @@
         cell = [[TChatMessageTextCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    TMessageModel *messageModel = [[TMessageModel alloc] init];
-    TUserModel *userModel = [[TUserModel alloc] init];
-    
-    [userModel setNickName:@"lichangxin"];
-    [userModel setAvatarUri:[NSURL URLWithString:@"http://q4pas9fmo.bkt.clouddn.com/group-avatar.png"]];
-    
-    [messageModel setFrom:userModel];
-    [messageModel setOwnerType:TMessageOwnerTypeOther];
-    [messageModel setText:@"1222"];
+    TUserModel *userModel = [[TUserModel alloc] initWithDictionary:@{
+        @"userId": @1,
+        @"nickname": @"lichangxin",
+        @"avatarUri": [NSURL URLWithString:@"https://source.qunarzz.com/common/hf/logo.png"],
+    }];
+    TMessageModel *messageModel = [[TMessageModel alloc] initWithDictionary:@{
+        @"from": userModel,
+        @"ownerType": @(TMessageOwnerTypeOther),
+        @"text": @"你好你好你好你好"
+    }];
 
     [cell setMessageModel:messageModel];
     

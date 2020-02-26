@@ -2,8 +2,13 @@
 #import "UIView+TL.h"
 #import "UIColor+Hex.h"
 
-#define kAvatarImageWidth kScreenWidth * (132 / 1080)
-#define kAvatarImageHeight kAvatarImageWidth
+#define kAvatarImageWidth                          kScreenWidth * (132 / 1080)
+#define kAvatarImageHeight                         kAvatarImageWidth
+#define kAvatarImageMarginLeft                     kScreenWidth * (37 / 1080)
+#define kAvatarImageMarginRight                    kScreenWidth * (53 / 1080)
+#define kMessageBackgroundViewMarginLeft           kScreenWidth * (36 / 1080)
+#define kMessageBackgroundViewMarginRight          kMessageBackgroundViewMarginLeft
+#define kMessageCellVerticalPadding                kScreenHeight * (103 / 1920)
 
 @implementation TChatMessageCell
 
@@ -19,13 +24,12 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    CGFloat cellWidth = [self frameWidth];
-    CGFloat avatarImageViewWidth = [[self avatarImageView] frameWidth];
-    
     if (_messageModel.ownerType == TMessageOwnerTypeSelf) {
-        [[self avatarImageView] setFrame:CGRectMake(cellWidth - 10.f - avatarImageViewWidth, 10.f, avatarImageViewWidth, avatarImageViewWidth)];
+        [[self avatarImageView] setOrigin:CGPointMake(kAvatarImageMarginLeft, kMessageCellVerticalPadding)];
+        [[self messageBackgroundView] setOrigin:CGPointMake(CGRectGetMaxX([[self avatarImageView] frame]) + kMessageBackgroundViewMarginLeft, kMessageCellVerticalPadding)];
     } else if (_messageModel.ownerType == TMessageOwnerTypeOther) {
-        [[self avatarImageView] setFrame:CGRectMake(10.f, 10.f, avatarImageViewWidth, avatarImageViewWidth)];
+        [[self avatarImageView] setOrigin:CGPointMake(kScreenWidth - kAvatarImageMarginRight - kAvatarImageWidth, kMessageCellVerticalPadding)];
+        [[self messageBackgroundView] setOrigin:CGPointMake(kScreenWidth - CGRectGetMinX([[self avatarImageView] frame]), kMessageCellVerticalPadding)];
     }
 }
 
@@ -40,7 +44,10 @@
         case TMessageOwnerTypeOther:
             [[self avatarImageView] setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:_messageModel.from.avatarUri]]];
             [[self messageBackgroundView] setBackgroundColor:[UIColor colorWithHexString:@"#F3F3F3"]];
+            break;
         case TMessageOwnerTypeSysyem:
+            break;
+        case TMessageOwnerTypeUnknown:
             break;
         default:
             break;
@@ -51,15 +58,14 @@
 
 - (UIImageView *) avatarImageView {
     if (_avatarImageView == nil) {
-        CGFloat imageViewWidth = 40.f;
-        _avatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, imageViewWidth, imageViewWidth)];
+        _avatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kAvatarImageWidth, kAvatarImageHeight)];
     }
     return _avatarImageView;
 }
 
 - (UIView *) messageBackgroundView {
     if (_messageBackgroundView == nil) {
-        _messageBackgroundView = [[UIView alloc] init];
+        _messageBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
     }
     return _messageBackgroundView;
 }

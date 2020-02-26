@@ -13,63 +13,63 @@ export default props => {
     const data = [{
         key: '1',
         name: '李二麻子',
-        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png', 
+        avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png', 
         overview: '你好你好你好你好你好你好你好你好',
         time: '9: 00',
         unreadCount: 1
     }, {
         key: '2',
         name: '一个群名',
-        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png', 
+        avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png', 
         overview: '你好你好你好你好你好',
         time: '9: 00',
         unreadCount: 0
     }, {
         key: '3',
         name: '新人助手',
-        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png', 
+        avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png', 
         overview: '你好你好你好你好你好',
         time: '9: 00',
         unreadCount: 0
     }, {
         key: '4',
         name: '新人助手',
-        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png', 
+        avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png', 
         overview: '你好你好你好你好你好',
         time: '9: 00',
         unreadCount: 0
     }, {
         key: '5',
         name: '新人助手',
-        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png', 
+        avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png', 
         overview: '你好你好你好你好你好',
         time: '9: 00',
         unreadCount: 0
     }, {
         key: '6',
         name: '新人助手',
-        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png', 
+        avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png', 
         overview: '你好你好你好你好你好',
         time: '9: 00',
         unreadCount: 0
     }, {
         key: '7',
         name: '新人助手',
-        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png', 
+        avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png', 
         overview: '你好你好你好你好你好',
         time: '9: 00',
         unreadCount: 0
     }, {
         key: '8',
         name: '新人助手',
-        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png', 
+        avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png', 
         overview: '你好你好你好你好你好',
         time: '9: 00',
         unreadCount: 0
     }, {
         key: '9',
         name: '新人助手',
-        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png', 
+        avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png', 
         overview: '你好你好你好你好你好',
         time: '9: 00',
         unreadCount: 0
@@ -90,7 +90,7 @@ export default props => {
                 onPress={() => props.navigation.navigate('InteractiveNotification')}>
                 <View style={[styles.noticeTabItem, { backgroundColor: '#f36968' }]}>
                     <Image
-                        source={{ uri: 'http://q4pas9fmo.bkt.clouddn.com/interactive-notification.png' }}
+                        source={{ uri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/interactive-notification.png' }}
                         style={styles.noticeTabItemIcon} />
                     <Text style={styles.noticeTabItemText}>互动通知</Text>
                 </View>
@@ -100,7 +100,7 @@ export default props => {
                 onPress={() => props.navigation.navigate('ActivityList')}>
                 <View style={[styles.noticeTabItem, { backgroundColor: '#6ad8af' }]}>
                     <Image
-                        source={{ uri: 'http://q4pas9fmo.bkt.clouddn.com/activity-list.png' }}
+                        source={{ uri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/activity-list.png' }}
                         style={styles.noticeTabItemIcon} />
                     <Text style={styles.noticeTabItemText}>活动列表</Text>
                 </View>
@@ -110,7 +110,7 @@ export default props => {
                 onPress={() => props.navigation.navigate('FriendsList')}>
                 <View style={[styles.noticeTabItem, { backgroundColor: '#62a6fc' }]}>
                     <Image
-                        source={{ uri: 'http://q4pas9fmo.bkt.clouddn.com/friends-list.png' }}
+                        source={{ uri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/friends-list.png' }}
                         style={styles.noticeTabItemIcon} />
                     <Text style={styles.noticeTabItemText}>好友列表</Text>
                 </View>

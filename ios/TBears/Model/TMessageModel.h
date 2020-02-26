@@ -7,6 +7,7 @@ typedef NS_ENUM(NSInteger, TMessageEmissionType) {
     TMessageSinglecast,
     TMessageBroadcast
 };
+
 // 消息类型
 typedef NS_ENUM(NSInteger, TMessageType) {
     TMessageTypeUnknown,

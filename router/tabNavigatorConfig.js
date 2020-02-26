@@ -6,31 +6,31 @@ import MineScreen from '@views/mine/index'
 export default [{
     name: 'Home',
     label: '首页',
-    iconInactiveUri: 'http://q4pas9fmo.bkt.clouddn.com/home-inactive.png',
-    iconActiveUri: 'http://q4pas9fmo.bkt.clouddn.com/home-active.png',
+    iconInactiveUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/home-inactive.png',
+    iconActiveUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/home-active.png',
     screen: HomeScreen
 }, {
     name: 'Meet',
     label: '擦肩',
-    iconInactiveUri: 'http://q4pas9fmo.bkt.clouddn.com/meet-inactive.png',
-    iconActiveUri: 'http://q4pas9fmo.bkt.clouddn.com/meet-active.png',
+    iconInactiveUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/meet-inactive.png',
+    iconActiveUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/meet-active.png',
     screen: MeetScreen
 }, {
     name: 'Publish',
     label: null,
-    iconInactiveUri: 'http://q4pas9fmo.bkt.clouddn.com/publish.png',
-    iconActiveUri: 'http://q4pas9fmo.bkt.clouddn.com/publish.png',
+    iconInactiveUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/publish.png',
+    iconActiveUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/publish.png',
     screen: null
 }, {
     name: 'Notice',
     label: '消息',
-    iconInactiveUri: 'http://q4pas9fmo.bkt.clouddn.com/notice-inactive.png',
-    iconActiveUri: 'http://q4pas9fmo.bkt.clouddn.com/notice-active.png',
+    iconInactiveUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/notice-inactive.png',
+    iconActiveUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/notice-active.png',
     screen: NoticeScreen
 }, {
     name: 'Mine',
     label: '我的',
-    iconInactiveUri: 'http://q4pas9fmo.bkt.clouddn.com/mine-inactive.png',
-    iconActiveUri: 'http://q4pas9fmo.bkt.clouddn.com/mine-active.png',
+    iconInactiveUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/mine-inactive.png',
+    iconActiveUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/mine-active.png',
     screen: MineScreen
 }]

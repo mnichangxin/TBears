@@ -12,19 +12,6 @@
 
 - (void) layoutSubviews {
     [super layoutSubviews];
-    
-    float x = [[self avatarImageView] originX] + (
-        self.messageModel.ownerType == TMessageOwnerTypeSelf
-        ? - [[self messageTextLabel] frameWidth] - 27.f
-        : [[self avatarImageView] frameWidth] + 23.f
-    );
-    float y = [[self avatarImageView] originY] + 11.f;
-    float h = MAX([[self messageTextLabel] frameHeight] + 30.f, [[self avatarImageView] frameHeight] + 10.f);
-    
-    x -= 18.f;
-    y = [[self avatarImageView] originY] - 5.f;
-    
-    [[self messageBackgroundView] setFrame:CGRectMake(x, y, [[self messageTextLabel] frameWidth] + 40.f, h)];
 }
 
 - (void) setMessageModel:(TMessageModel *)messageModel {

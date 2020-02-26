@@ -18,7 +18,7 @@ export default props => (
                             activeOpacity={.6}
                             onPress={() => props.navigation && props.navigation.goBack()}>
                             <Image
-                                source={{ uri: 'http://q4pas9fmo.bkt.clouddn.com/goBack.png' }}
+                                source={{ uri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/goBack.png' }}
                                 style={styles.headerGoBackIcon} />
                         </TouchableOpacity>
                     )

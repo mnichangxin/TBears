@@ -10,22 +10,22 @@ import styles from '@styles/notice/friendsList'
 export default props => {
     const data = [{
         key: '1',
-        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/add-friends.png',
+        avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/add-friends.png',
     }, {
         key: '2',
-        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png',
+        avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png',
         nickname: '李二麻子'
     }, {
         key: '3',
-        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png',
+        avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png',
         nickname: '李二麻子'
     }, {
         key: '4',
-        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png',
+        avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png',
         nickname: '李二麻子'
     }, {
         key: '5',
-        avatarUri: 'http://q4pas9fmo.bkt.clouddn.com/group-avatar.png',
+        avatarUri: 'https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png',
         nickname: '李二麻子'
     }]
     const renderFriendsListItem = data => (
