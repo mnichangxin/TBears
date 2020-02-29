@@ -6,6 +6,8 @@
 
 @interface TChatMessageViewController ()
 
+@property (nonatomic, strong) NSMutableArray *messages;
+@property (nonatomic, strong) NSMutableArray *cells;
 @property (nonatomic, strong) UITapGestureRecognizer *tapGR;
 
 @end
@@ -15,9 +17,17 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
     
+    [self initData];
+    
     [[self view] setBackgroundColor:[UIColor colorWithHexString:@"#fbfbfb"]];
     [[self view] addGestureRecognizer:[self tapGR]];
-//    [[self tableView] setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    [[self tableView] setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+}
+
+- (void) initData {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"messageInfo" ofType:@"plist"];
+    NSMutableArray *array = [NSMutableArray arrayWithContentsOfFile:path];
+    [self setMessages:array];
 }
 
 #pragma mark - UITableViewDelegate
@@ -27,7 +37,7 @@
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return [[self messages] count];
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -37,17 +47,17 @@
     
     if (!cell) {
         cell = [[TChatMessageTextCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        [[self cells] addObject:cell];
     }
     
-    TUserModel *userModel = [[TUserModel alloc] initWithDictionary:@{
-        @"userId": @1,
-        @"nickname": @"lichangxin",
-        @"avatarUri": [NSURL URLWithString:@"https://tbears-1300872647.cos.ap-beijing.myqcloud.com/group-avatar.png"],
-    }];
+    NSDictionary *message = [[self messages] objectAtIndex:[indexPath row]];
+    
+    TUserModel *userModel = [[TUserModel alloc] initWithDictionary:[message objectForKey:@"from"]];
+    
     TMessageModel *messageModel = [[TMessageModel alloc] initWithDictionary:@{
         @"from": userModel,
-        @"ownerType": @(TMessageOwnerTypeOther),
-        @"text": @"你好你好你好你好"
+        @"ownerType": [message objectForKey:@"ownerType"],
+        @"text": [message objectForKey:@"text"]
     }];
 
     [cell setMessageModel:messageModel];
@@ -55,9 +65,11 @@
     return cell;
 }
 
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return 60.f;
-//}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    TChatMessageCell *cell = [[self cells] objectAtIndex:[indexPath row]];
+
+    return [cell height];
+}
 
 #pragma mark - Methods
 
@@ -68,6 +80,20 @@
 }
 
 #pragma mark - Getter
+
+- (NSMutableArray *) messages {
+    if (_messages == nil) {
+        _messages = [[NSMutableArray alloc] init];
+    }
+    return _messages;
+}
+
+- (NSMutableArray *) cells {
+    if (_cells == nil) {
+        _cells = [[NSMutableArray alloc] init];
+    }
+    return _cells;
+}
 
 - (UITapGestureRecognizer *) tapGR {
     if (_tapGR == nil) {

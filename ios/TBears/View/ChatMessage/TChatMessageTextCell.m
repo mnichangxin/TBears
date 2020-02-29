@@ -5,19 +5,15 @@
 
 - (instancetype) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        [self addSubview:[self messageTextLabel]];
+        [[self contentView] addSubview:[self messageTextLabel]];
     }
     return self;
 }
 
-- (void) layoutSubviews {
-    [super layoutSubviews];
-}
-
-- (void) setMessageModel:(TMessageModel *)messageModel {
-    [super setMessageModel:messageModel];
-    [_messageTextLabel setText:[messageModel text]];
-}
+//- (void) setMessageModel:(TMessageModel *)messageModel {
+//    [super setMessageModel:messageModel];
+//    [_messageTextLabel setText:[messageModel text]];
+//}
 
 #pragma mark - Getter
 

@@ -16,22 +16,12 @@
 - (instancetype) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self addSubview:[self avatarImageView]];
-        [self addSubview:[self messageBackgroundView]];
+        [self setSelectionStyle:UITableViewCellSelectionStyleNone];
+        [self setBackgroundColor:[UIColor clearColor]];
+        [[self contentView] addSubview:[self avatarImageView]];
+        [[self contentView] addSubview:[self messageBackgroundView]];
     }
     return self;
-}
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    
-    if (_messageModel.ownerType == TMessageOwnerTypeSelf) {
-        [[self avatarImageView] setOrigin:CGPointMake(kAvatarImageMarginLeft, kMessageCellVerticalPadding)];
-        [[self messageBackgroundView] setOrigin:CGPointMake(CGRectGetMaxX([[self avatarImageView] frame]) + kMessageBackgroundViewMarginLeft, kMessageCellVerticalPadding)];
-    } else if (_messageModel.ownerType == TMessageOwnerTypeOther) {
-        [[self avatarImageView] setOrigin:CGPointMake(kScreenWidth - kAvatarImageMarginRight - kAvatarImageWidth, kMessageCellVerticalPadding)];
-        [[self messageBackgroundView] setOrigin:CGPointMake(kScreenWidth - CGRectGetMinX([[self avatarImageView] frame]), kMessageCellVerticalPadding)];
-    }
 }
 
 - (void) setMessageModel:(TMessageModel *)messageModel {
@@ -39,11 +29,15 @@
     
     switch (_messageModel.ownerType) {
         case TMessageOwnerTypeSelf:
+            [[self avatarImageView] setOrigin:CGPointMake(kAvatarImageMarginLeft, kMessageCellVerticalPadding)];
             [[self avatarImageView] sd_setImageWithURL:_messageModel.from.avatarUri];
+            [[self messageBackgroundView] setOrigin:CGPointMake(CGRectGetMaxX([[self avatarImageView] frame]) + kMessageBackgroundViewMarginLeft, kMessageCellVerticalPadding)];
             [[self messageBackgroundView] setBackgroundColor:[UIColor colorWithHexString:@"#564F5F"]];
             break;
         case TMessageOwnerTypeOther:
+            [[self avatarImageView] setOrigin:CGPointMake(kScreenWidth - kAvatarImageMarginRight - kAvatarImageWidth, kMessageCellVerticalPadding)];
             [[self avatarImageView] sd_setImageWithURL:_messageModel.from.avatarUri];
+            [[self messageBackgroundView] setOrigin:CGPointMake(kScreenWidth - CGRectGetMinX([[self avatarImageView] frame]), kMessageCellVerticalPadding)];
             [[self messageBackgroundView] setBackgroundColor:[UIColor colorWithHexString:@"#F3F3F3"]];
             break;
         case TMessageOwnerTypeSysyem:
@@ -53,6 +47,8 @@
         default:
             break;
     }
+    
+    [self setHeight:CGRectGetMaxY([[self avatarImageView] frame])];
 }
 
 #pragma mark - Getter

@@ -10,6 +10,7 @@
 		02AD445F5C2B4BC19F68328D /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06C997CDAFDF47F2852473AE /* Fontisto.ttf */; };
 		087CE9DCB40248FD8A6FC8C9 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC719B7B74734243B38DAEEB /* Feather.ttf */; };
 		0B582C1624016C0A00B3BD48 /* UIView+TL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B582C1524016C0A00B3BD48 /* UIView+TL.m */; };
+		0B65145F2407938F00413EC9 /* messageInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B65145E2407938F00413EC9 /* messageInfo.plist */; };
 		0B6E6AA823EEAD11002171BE /* TNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E6AA723EEAD11002171BE /* TNavigationController.m */; };
 		0B6E6AAC23EEF374002171BE /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E6AAB23EEF374002171BE /* UIColor+Hex.m */; };
 		0B6E6AAF23EEFBC9002171BE /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E6AAE23EEFBC9002171BE /* UIImage+Color.m */; };
@@ -51,6 +52,7 @@
 		06C997CDAFDF47F2852473AE /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/native-base/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		0B582C1424016C0A00B3BD48 /* UIView+TL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+TL.h"; sourceTree = "<group>"; };
 		0B582C1524016C0A00B3BD48 /* UIView+TL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+TL.m"; sourceTree = "<group>"; };
+		0B65145E2407938F00413EC9 /* messageInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = messageInfo.plist; sourceTree = "<group>"; };
 		0B6E6AA623EEAD11002171BE /* TNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNavigationController.h; sourceTree = "<group>"; };
 		0B6E6AA723EEAD11002171BE /* TNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNavigationController.m; sourceTree = "<group>"; };
 		0B6E6AAA23EEF374002171BE /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				0BFACC2223F0484900D941F1 /* TChatBoxViewController.m */,
 				0BFACC1E23F0480700D941F1 /* TChatMessageViewController.h */,
 				0BFACC1F23F0480700D941F1 /* TChatMessageViewController.m */,
+				0B65145E2407938F00413EC9 /* messageInfo.plist */,
 			);
 			name = Chat;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				5CDD453D5CF44F67853AFE5B /* FontAwesome5_Brands.ttf in Resources */,
 				C29560A959404A33AD8F1BCA /* FontAwesome5_Regular.ttf in Resources */,
 				C1CE3B605B344A38903C8371 /* FontAwesome5_Solid.ttf in Resources */,
+				0B65145F2407938F00413EC9 /* messageInfo.plist in Resources */,
 				02AD445F5C2B4BC19F68328D /* Fontisto.ttf in Resources */,
 				94AB4D7733A54708A3D683A4 /* Foundation.ttf in Resources */,
 				3F6EF4B82F2B46A2A4B16357 /* Ionicons.ttf in Resources */,
