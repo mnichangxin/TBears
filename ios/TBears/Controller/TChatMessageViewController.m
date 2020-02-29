@@ -57,10 +57,12 @@
     TMessageModel *messageModel = [[TMessageModel alloc] initWithDictionary:@{
         @"from": userModel,
         @"ownerType": [message objectForKey:@"ownerType"],
+        @"emissionType": [message objectForKey:@"emissionType"],
         @"text": [message objectForKey:@"text"]
     }];
 
     [cell setMessageModel:messageModel];
+    [cell layoutViews];
     
     return cell;
 }

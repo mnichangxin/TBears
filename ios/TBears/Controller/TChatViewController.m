@@ -26,7 +26,7 @@
 - (void) setNavigationItem {
     UINavigationItem *navItem = [self navigationItem];
     
-    [navItem setTitle:@"聊天"];
+    [navItem setTitle:@"李二麻子"];
     [navItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navBarMore"] style:UIBarButtonItemStylePlain target:self action:nil]];
 }
 

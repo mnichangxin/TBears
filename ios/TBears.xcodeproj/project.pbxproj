@@ -21,6 +21,7 @@
 		0BC7E5F623F924C700604D1C /* TUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC7E5F523F924C700604D1C /* TUserModel.m */; };
 		0BC7E5FA23F92F1300604D1C /* TChatMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC7E5F923F92F1300604D1C /* TChatMessageCell.m */; };
 		0BC7E5FD23F9344C00604D1C /* TChatMessageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC7E5FC23F9344C00604D1C /* TChatMessageTextCell.m */; };
+		0BC983A7240AC5D5002C2707 /* TLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC983A6240AC5D5002C2707 /* TLabel.m */; };
 		0BFACC2023F0480700D941F1 /* TChatMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFACC1F23F0480700D941F1 /* TChatMessageViewController.m */; };
 		0BFACC2323F0484900D941F1 /* TChatBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFACC2223F0484900D941F1 /* TChatBoxViewController.m */; };
 		0BFACC2723F05F2800D941F1 /* TChatBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFACC2623F05F2800D941F1 /* TChatBoxView.m */; };
@@ -75,6 +76,8 @@
 		0BC7E5F923F92F1300604D1C /* TChatMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TChatMessageCell.m; sourceTree = "<group>"; };
 		0BC7E5FB23F9344C00604D1C /* TChatMessageTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TChatMessageTextCell.h; sourceTree = "<group>"; };
 		0BC7E5FC23F9344C00604D1C /* TChatMessageTextCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TChatMessageTextCell.m; sourceTree = "<group>"; };
+		0BC983A5240AC5D5002C2707 /* TLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLabel.h; sourceTree = "<group>"; };
+		0BC983A6240AC5D5002C2707 /* TLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLabel.m; sourceTree = "<group>"; };
 		0BFACC1E23F0480700D941F1 /* TChatMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TChatMessageViewController.h; sourceTree = "<group>"; };
 		0BFACC1F23F0480700D941F1 /* TChatMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TChatMessageViewController.m; sourceTree = "<group>"; };
 		0BFACC2123F0484900D941F1 /* TChatBoxViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TChatBoxViewController.h; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 			children = (
 				0B6E6AA623EEAD11002171BE /* TNavigationController.h */,
 				0B6E6AA723EEAD11002171BE /* TNavigationController.m */,
+				0BC983A5240AC5D5002C2707 /* TLabel.h */,
+				0BC983A6240AC5D5002C2707 /* TLabel.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -467,6 +472,7 @@
 				0B7061C323EE93F7009D3233 /* TRootViewController.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				0BFACC2023F0480700D941F1 /* TChatMessageViewController.m in Sources */,
+				0BC983A7240AC5D5002C2707 /* TLabel.m in Sources */,
 				0BC7E5F323F9243700604D1C /* TMessageModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

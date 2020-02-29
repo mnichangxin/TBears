@@ -5,11 +5,11 @@
 - (TMessageModel *)initWithDictionary:(NSDictionary *)dic {
     [self setFrom:dic[@"from"]];
     [self setDate:dic[@"date"]];
-    [self setEmissionType:[dic[@"emissionType"] emissionType]];
-    [self setMessageType:[dic[@"messageType"] messageType]];
+    [self setEmissionType:[dic[@"emissionType"] integerValue]];
+    [self setMessageType:[dic[@"messageType"] integerValue]];
     [self setOwnerType:[dic[@"ownerType"] integerValue]];
-    [self setReadState:[dic[@"readState"] readState]];
-    [self setSendState:[dic[@"sendState"] sendState]];
+    [self setReadState:[dic[@"readState"] integerValue]];
+    [self setSendState:[dic[@"sendState"] integerValue]];
     [self setText:dic[@"text"]];
     [self setImageUri:dic[@"imageUri"]];
     [self setVoiceUri:dic[@"voiceUri"]];
