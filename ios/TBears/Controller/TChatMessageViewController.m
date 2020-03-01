@@ -22,6 +22,7 @@
     [[self view] setBackgroundColor:[UIColor colorWithHexString:@"#fbfbfb"]];
     [[self view] addGestureRecognizer:[self tapGR]];
     [[self tableView] setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    [[self tableView] setShowsVerticalScrollIndicator:NO];
 }
 
 - (void) initData {

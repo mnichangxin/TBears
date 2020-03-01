@@ -2,7 +2,6 @@
 #import "UIView+TL.h"
 #import "UIColor+Hex.h"
 
-#define kMessageCellVerticalPadding        kScreenHeight * (103.f / 1920)
 #define kMessageTextLabelMaxWidth          kScreenWidth * (712.f / 1080)
 #define kMessageTextLabelMarginLeft        kScreenWidth * (36.f / 1080)
 #define kMessageTextLabelMarginRight       kMessageTextLabelMarginLeft
