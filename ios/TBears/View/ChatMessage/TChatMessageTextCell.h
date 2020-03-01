@@ -1,9 +1,10 @@
 #import <UIKit/UIKit.h>
+#import "TLabel.h"
 #import "TChatMessageCell.h"
 
 @interface TChatMessageTextCell : TChatMessageCell
 
-@property (nonatomic, strong) UILabel *messageTextLabel;
+@property (nonatomic, strong) TLabel *messageTextLabel; // 消息框
 
 @end
 

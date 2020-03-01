@@ -20,4 +20,11 @@
     [super drawTextInRect:UIEdgeInsetsInsetRect(rect, [self insets])];
 }
 
+- (CGSize) size {
+    CGSize size = [super intrinsicContentSize];
+    size.width += self.insets.left + self.insets.right;
+    size.height += self.insets.top + self.insets.bottom;
+    return size;
+}
+
 @end

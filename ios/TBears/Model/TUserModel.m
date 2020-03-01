@@ -2,7 +2,7 @@
 
 @implementation TUserModel
 
-- (TUserModel *) initWithDictionary:(NSDictionary *)dic {
+- (TUserModel *) initWithDictionary:(NSDictionary *)dic {    
     [self setUserId:[dic[@"userId"] integerValue]];
     [self setNickName:dic[@"nickName"]];
     [self setAvatarUri:dic[@"avatarUri"]];
