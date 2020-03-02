@@ -3,7 +3,7 @@ import { View,TextInput, Text } from 'react-native'
 import Header from '@views/common/header'
 import styles from '@styles/complaint'
 
-export default class omplaint extends Component {
+export default class Complaint extends Component {
     state = {
         text:''
     }
