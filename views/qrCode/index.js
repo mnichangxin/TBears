@@ -41,6 +41,6 @@ export default () => (
                 <Text style={styles.btnText}>分享</Text>
             </View> 
         </View>
-        <Text style={styles.slogan}>走，带你去看花花世界</Text> 
+        <Text style={styles.slogan}>[走，带你去看花花世界]</Text> 
     </View>
 )

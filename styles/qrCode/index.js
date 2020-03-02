@@ -64,6 +64,7 @@ export default StyleSheet.create({
     avatar:{
         position:'absolute',
         top:scaleSize(-100),
+        left:scaleSize(280),
         width:scaleSize(240),
         height:scaleSize(240),
         borderRadius:scaleSize(120)
@@ -78,7 +79,8 @@ export default StyleSheet.create({
         width:scaleSize(520),
         height:scaleSize(520),
         backgroundColor:'red',
-        marginTop:scaleSize(62)
+        marginTop:scaleSize(62),
+        marginLeft:scaleSize(142)
     },
     operationBox:{
         marginTop:scaleSize(100),

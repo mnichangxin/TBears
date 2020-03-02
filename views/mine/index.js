@@ -13,7 +13,7 @@ const imageUrl = {
     sexIcon:require('../../assets/mine/QR-icon.png'),
     netIcon:require('../../assets/mine/QR-icon.png'),
     hobbyIcon:require('../../assets/mine/bulb.png'),
-    locationIcon:require('../../assets/mine/bulb.png'),
+    locationIcon:require('../../assets/mine/local.png'),
     QRCodeIcon:require('../../assets/mine/QR-icon.png'),
     EditIcon:require('../../assets/mine/edit.png'),
     done:require('../../assets/mine/undone-icon.png'),

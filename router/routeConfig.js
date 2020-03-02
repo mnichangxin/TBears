@@ -5,6 +5,7 @@ import ActivityList from '@views/notice/activityList'
 import FriendsList from '@views/notice/friendsList'
 import AddFriends from '@views/notice/addFriends'
 import QrCode from '@views/qrCode'
+import Complaint from '@views/complaint'
 
 export default {
     MainTab: {
@@ -25,7 +26,10 @@ export default {
     AddFriends: {
         screen: AddFriends
     },
-    Mine:{
+    QrCode:{
         screen:QrCode
+    },
+    Mine:{
+        screen:Complaint
     }
 }
