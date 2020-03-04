@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { View,Text } from 'react-native'
 import Header from '@views/common/header'
 import styles from '@styles/store'
-const storeBg = require('../../assets/mine/store-bg.png')
 
 export default class Store extends Component {
     state = {
