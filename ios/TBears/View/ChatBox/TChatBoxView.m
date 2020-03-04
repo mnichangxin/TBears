@@ -93,8 +93,9 @@
         [_textView setTextColor:[UIColor colorWithHexString:@"#333333"]];
         [_textView setTextAlignment:NSTextAlignmentLeft];
         [_textView setReturnKeyType:UIReturnKeySend];
+        [_textView setScrollEnabled:NO];
         [_textView setFont:[UIFont systemFontOfSize:16.f]];
-        [_textView setContentInset:UIEdgeInsetsMake(kTextViewHeight * 0.1, kTextViewWidth * 0.03, 0, kTextViewWidth * 0.03)];
+        [_textView setTextContainerInset:UIEdgeInsetsMake(kTextViewHeight * 0.3, kTextViewWidth * 0.03, 0, kTextViewWidth * 0.03)];
         [_textView.layer setBorderWidth:1.f];
         [_textView.layer setBorderColor:[[UIColor colorWithHexString:@"#f2f2f2"] CGColor]];
         [_textView.layer setCornerRadius:20.f];
