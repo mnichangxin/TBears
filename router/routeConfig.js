@@ -9,6 +9,7 @@ import Complaint from '@views/complaint'
 import Store from '@views/store'
 import Config from '@views/config'
 import StoreList from '@views/storeList'
+import EditInfo from '@views/editInfo'
 
 export default {
     MainTab: {
@@ -44,7 +45,10 @@ export default {
     Config:{
         screen:Config
     },
+    EditInfo:{
+        screen:EditInfo
+    },
     Mine:{
-        screen:StoreList
+        screen:EditInfo
     }
 }
