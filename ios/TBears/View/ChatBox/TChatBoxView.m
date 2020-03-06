@@ -1,9 +1,10 @@
 #import "TChatBoxView.h"
+#import "TButton.h"
 #import "UIColor+Hex.h"
 
-#define  kTextViewWidth         kScreenWidth * 0.9
-#define  kTextViewHeight        kChatBoxHeight * 0.38
-#define  kTextViewMarginLeft    kScreenWidth * 0.05
+//#define  kTextViewWidth         kScreenWidth * 0.9
+//#define  kTextViewHeight        kChatBoxHeight * 0.38
+//#define  kTextViewMarginLeft    kScreenWidth * 0.05
 #define  kTextViewMarginTop     kChatBoxHeight * 0.137
 
 #define  kToolBarWidth          kScreenWidth * 0.9
@@ -13,16 +14,25 @@
 #define  kToolBarItemSize       kToolBarHeight * 0.54
 #define  kToolBarItemMarginLeft kToolBarWidth * 0.265
 
+
+#define kChatBoxInsetTop          kScreenHeight * (36.f / 1920)
+#define KVoiceButtonMarginLeft    kScreenWidth * (60.f / 1080)
+#define kToolButtonWidth          kScreenWidth * (62.f / 1080)
+#define kToolButtonHeight         kToolButtonWidth
+#define kToolButtonMarginTVTop    kScreenHeight * (18.f / 1920)
+#define kTextViewWidth            kScreenWidth * (750.f / 1080)
+#define kTextViewHeight           kScreenHeight * (96.f / 1920)
+#define kTextViewMarginLeft       kScreenWidth * (43.f / 1080)
+#define kImageButtonMarginLeft    kTextViewMarginLeft
+
 @interface TChatBoxView ()<UITextViewDelegate>
 
 @property (nonatomic, strong) UIView *topLine;
 @property (nonatomic, strong) UITextView *textView;
-@property (nonatomic, strong) UIButton *sendButton;
-@property (nonatomic, strong) UIView *toolBar;
-@property (nonatomic, strong) UIButton *imageButton;
-@property (nonatomic, strong) UIButton *voiceButton;
-@property (nonatomic, strong) UIButton *faceButton;
-@property (nonatomic, strong) UIButton *moreButton;
+@property (nonatomic, strong) TButton *imageButton;
+@property (nonatomic, strong) TButton *voiceButton;
+@property (nonatomic, strong) TButton *faceButton;
+@property (nonatomic, strong) TButton *moreButton;
 @property (nonatomic, assign) ChatBoxStatus status;
 
 @end
@@ -34,9 +44,11 @@
     if (self) {
         [self setBackgroundColor:[UIColor colorWithHexString:@"#ffffff"]];
         [self addSubview:[self topLine]];
+        [self addSubview:[self voiceButton]];
         [self addSubview:[self textView]];
-        [self addSubview:[self toolBar]];
-        [self setStatus:ChatBoxNotingStatus];
+        [self addSubview:[self imageButton]];
+        
+//        [self setStatus:ChatBoxNotingStatus];
     }
     return self;
 }
@@ -86,9 +98,17 @@
     return _topLine;
 }
 
+- (UIButton *) voiceButton {
+    if (_voiceButton == nil) {
+        _voiceButton = [[TButton alloc] initWithFrame:CGRectMake(KVoiceButtonMarginLeft, kChatBoxInsetTop + kToolButtonMarginTVTop, kToolButtonWidth, kToolButtonHeight)];
+        [_voiceButton setImage:[UIImage imageNamed:@"tCVoice"] forState:UIControlStateNormal];
+    }
+    return _voiceButton;
+}
+
 - (UITextView *) textView {
     if (_textView == nil) {
-        _textView = [[UITextView alloc] initWithFrame:CGRectMake(kTextViewMarginLeft, kTextViewMarginTop, kTextViewWidth, kTextViewHeight)];
+        _textView = [[UITextView alloc] initWithFrame:CGRectMake(CGRectGetMaxX([[self voiceButton] frame]) + kTextViewMarginLeft, kChatBoxInsetTop, kTextViewWidth, kTextViewHeight)];
         [_textView setBackgroundColor:[UIColor colorWithHexString:@"#f2f2f2"]];
         [_textView setTextColor:[UIColor colorWithHexString:@"#333333"]];
         [_textView setTextAlignment:NSTextAlignmentLeft];
@@ -104,42 +124,14 @@
     return _textView;
 }
 
-- (UIButton *) sendButton {
-    if (_sendButton == nil) {
-        _sendButton = [[UIButton alloc] initWithFrame:CGRectMake(kTextViewMarginLeft + kTextViewWidth + kScreenWidth * 0.035, kChatBoxHeight - kTextViewHeight - kToolBarHeight + kTextViewHeight * 0.1, kScreenWidth * 0.15, kTextViewHeight * 0.83)];
-        [_sendButton setTitle:@"发送" forState:UIControlStateNormal];
-        [_sendButton setTintColor:[UIColor colorWithHexString:@"#ffffff"]];
-        [_sendButton setBackgroundColor:[UIColor colorWithHexString:@"#564F5F"]];
-        [_sendButton.layer setCornerRadius:18.f];
-    }
-    return _sendButton;
-}
-
-- (UIView *) toolBar {
-    if (_toolBar == nil) {
-        _toolBar = [[UIView alloc] initWithFrame:CGRectMake(kTextViewMarginLeft, kTextViewMarginTop + kTextViewHeight, kToolBarWidth, kToolBarHeight)];
-        [_toolBar addSubview:[self imageButton]];
-        [_toolBar addSubview:[self voiceButton]];
-        [_toolBar addSubview:[self faceButton]];
-        [_toolBar addSubview:[self moreButton]];
-    }
-    return _toolBar;
-}
-
-- (UIButton *) imageButton {
+- (TButton *) imageButton {
     if (_imageButton == nil) {
-        _imageButton = [[UIButton alloc] initWithFrame:CGRectMake(kToolBarPaddingLeft, kToolBarPaddingTop, kToolBarItemSize, kToolBarItemSize)];
+        _imageButton = [[TButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX([[self textView] frame]) + kImageButtonMarginLeft, kChatBoxInsetTop + kToolButtonMarginTVTop, kToolButtonWidth, kToolButtonHeight)];
         [_imageButton setImage:[UIImage imageNamed:@"tCImage"] forState:UIControlStateNormal];
+//        [_imageButton setBackgroundColor:[UIColor grayColor]];
+        [[_imageButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
     }
     return _imageButton;
-}
-
-- (UIButton *) voiceButton {
-    if (_voiceButton == nil) {
-        _voiceButton = [[UIButton alloc] initWithFrame:CGRectMake(kToolBarPaddingLeft + kToolBarItemMarginLeft, kToolBarPaddingTop, kToolBarItemSize, kToolBarItemSize)];
-        [_voiceButton setImage:[UIImage imageNamed:@"tCVoice"] forState:UIControlStateNormal];
-    }
-    return _voiceButton;
 }
 
 - (UIButton *) faceButton {
@@ -151,12 +143,5 @@
     return _faceButton;
 }
 
-- (UIButton *) moreButton {
-    if (_moreButton == nil) {
-        _moreButton = [[UIButton alloc] initWithFrame:CGRectMake(kToolBarPaddingLeft + 3 * kToolBarItemMarginLeft, kToolBarPaddingTop, kToolBarItemSize, kToolBarItemSize)];
-        [_moreButton setImage:[UIImage imageNamed:@"tCMore"] forState:UIControlStateNormal];
-    }
-    return _moreButton;
-}
 
 @end

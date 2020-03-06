@@ -58,7 +58,7 @@
 
 - (TChatBoxView *) tCBoxView {
     if (_tCBoxView == nil) {
-        _tCBoxView =  [[TChatBoxView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kChatBoxHeight)];
+        _tCBoxView =  [[TChatBoxView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 0)];
         [_tCBoxView setDelegate:self];
     }
     return _tCBoxView;
