@@ -42,7 +42,7 @@
     NSValue *value = [useInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
     CGFloat keyboardHeight = [value CGRectValue].size.height;
     CGFloat tChatBoxHeight = 0.f;
-    
+
     if ([[sender name] isEqualToString:UIKeyboardWillShowNotification]) {
         tChatBoxHeight = kChatBoxHeight + keyboardHeight;
     } else {
@@ -58,7 +58,7 @@
 
 - (TChatBoxView *) tCBoxView {
     if (_tCBoxView == nil) {
-        _tCBoxView =  [[TChatBoxView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 0)];
+        _tCBoxView =  [[TChatBoxView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kChatBoxHeight)];
         [_tCBoxView setDelegate:self];
     }
     return _tCBoxView;

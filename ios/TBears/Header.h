@@ -22,7 +22,7 @@
 
 #pragma mark - 聊天界面相关
 
-// 聊天框高度
-#define kChatBoxHeight          kScreenHeight * 0.128
+// 聊天框默认高度
+#define kChatBoxHeight          (kIS_iPhoneX ? kScreenHeight * (142.f / 1920) : kScreenHeight * (192.f / 1920))
 
 #endif

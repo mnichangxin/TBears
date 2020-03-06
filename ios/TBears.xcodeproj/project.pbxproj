@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		02AD445F5C2B4BC19F68328D /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06C997CDAFDF47F2852473AE /* Fontisto.ttf */; };
 		087CE9DCB40248FD8A6FC8C9 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC719B7B74734243B38DAEEB /* Feather.ttf */; };
+		0B0BB9BF2412A386006C5A65 /* TTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BB9BE2412A386006C5A65 /* TTextView.m */; };
 		0B582C1624016C0A00B3BD48 /* UIView+TL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B582C1524016C0A00B3BD48 /* UIView+TL.m */; };
 		0B65145F2407938F00413EC9 /* messageInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B65145E2407938F00413EC9 /* messageInfo.plist */; };
 		0B6E6AA823EEAD11002171BE /* TNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E6AA723EEAD11002171BE /* TNavigationController.m */; };
@@ -52,6 +53,8 @@
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; name = main.jsbundle; path = ../main.jsbundle; sourceTree = "<group>"; };
 		06C997CDAFDF47F2852473AE /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/native-base/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
+		0B0BB9BD2412A386006C5A65 /* TTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTextView.h; sourceTree = "<group>"; };
+		0B0BB9BE2412A386006C5A65 /* TTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTextView.m; sourceTree = "<group>"; };
 		0B582C1424016C0A00B3BD48 /* UIView+TL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+TL.h"; sourceTree = "<group>"; };
 		0B582C1524016C0A00B3BD48 /* UIView+TL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+TL.m"; sourceTree = "<group>"; };
 		0B65145E2407938F00413EC9 /* messageInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = messageInfo.plist; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 				0BC983A6240AC5D5002C2707 /* TLabel.m */,
 				0BAD1903241158F0006D7189 /* TButton.h */,
 				0BAD1904241158F0006D7189 /* TButton.m */,
+				0B0BB9BD2412A386006C5A65 /* TTextView.h */,
+				0B0BB9BE2412A386006C5A65 /* TTextView.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -213,10 +218,10 @@
 			children = (
 				0B7061C423EE9443009D3233 /* TChatViewController.h */,
 				0B7061C523EE9443009D3233 /* TChatViewController.m */,
-				0BFACC2123F0484900D941F1 /* TChatBoxViewController.h */,
-				0BFACC2223F0484900D941F1 /* TChatBoxViewController.m */,
 				0BFACC1E23F0480700D941F1 /* TChatMessageViewController.h */,
 				0BFACC1F23F0480700D941F1 /* TChatMessageViewController.m */,
+				0BFACC2123F0484900D941F1 /* TChatBoxViewController.h */,
+				0BFACC2223F0484900D941F1 /* TChatBoxViewController.m */,
 				0B65145E2407938F00413EC9 /* messageInfo.plist */,
 			);
 			name = Chat;
@@ -465,6 +470,7 @@
 				0BFACC2723F05F2800D941F1 /* TChatBoxView.m in Sources */,
 				0B6E6AA823EEAD11002171BE /* TNavigationController.m in Sources */,
 				0BB1169C23EC63B50079CEE8 /* RNBridge.m in Sources */,
+				0B0BB9BF2412A386006C5A65 /* TTextView.m in Sources */,
 				0BC7E5FA23F92F1300604D1C /* TChatMessageCell.m in Sources */,
 				0BAD1905241158F0006D7189 /* TButton.m in Sources */,
 				0B7061C623EE9443009D3233 /* TChatViewController.m in Sources */,

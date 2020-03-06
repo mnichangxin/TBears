@@ -2,28 +2,20 @@
 #import "TButton.h"
 #import "UIColor+Hex.h"
 
-//#define  kTextViewWidth         kScreenWidth * 0.9
-//#define  kTextViewHeight        kChatBoxHeight * 0.38
-//#define  kTextViewMarginLeft    kScreenWidth * 0.05
-#define  kTextViewMarginTop     kChatBoxHeight * 0.137
-
-#define  kToolBarWidth          kScreenWidth * 0.9
-#define  kToolBarHeight         kChatBoxHeight * 0.48
-#define  kToolBarPaddingTop     kToolBarHeight * 0.28
-#define  kToolBarPaddingLeft    kToolBarWidth * 0.07
-#define  kToolBarItemSize       kToolBarHeight * 0.54
-#define  kToolBarItemMarginLeft kToolBarWidth * 0.265
-
-
 #define kChatBoxInsetTop          kScreenHeight * (36.f / 1920)
 #define KVoiceButtonMarginLeft    kScreenWidth * (60.f / 1080)
 #define kToolButtonWidth          kScreenWidth * (62.f / 1080)
 #define kToolButtonHeight         kToolButtonWidth
-#define kToolButtonMarginTVTop    kScreenHeight * (18.f / 1920)
+#define kToolButtonMarginTVTop    kScreenHeight * (20.f / 1920)
 #define kTextViewWidth            kScreenWidth * (750.f / 1080)
 #define kTextViewHeight           kScreenHeight * (96.f / 1920)
 #define kTextViewMarginLeft       kScreenWidth * (43.f / 1080)
+#define kTextViewInsetTop         kScreenHeight * (26.f / 1920)
+#define kTextViewInsetBottom      kScreenHeight * (18.f / 1920)
+#define kTextViewInsetLeft        kScreenWidth * (36.f / 1080)
+#define kTextViewInsetRight       kScreenWidth * (108.f / 1080)
 #define kImageButtonMarginLeft    kTextViewMarginLeft
+#define kFaceButtonMarginRight    kScreenWidth * (42.f / 1080)
 
 @interface TChatBoxView ()<UITextViewDelegate>
 
@@ -46,9 +38,9 @@
         [self addSubview:[self topLine]];
         [self addSubview:[self voiceButton]];
         [self addSubview:[self textView]];
+        [self addSubview:[self faceButton]];
         [self addSubview:[self imageButton]];
-        
-//        [self setStatus:ChatBoxNotingStatus];
+        [self setStatus:ChatBoxNotingStatus];
     }
     return self;
 }
@@ -61,13 +53,18 @@
 #pragma mark - UITextViewDelegate
 
 - (void) textViewDidBeginEditing:(UITextView *)textView {
-    ChatBoxStatus fromStatus = [self status];
-    
-    [self setStatus:ChatBoxShowKeyboard];
-    
-    if (_delegate && [_delegate respondsToSelector:@selector(tChatBoxView:changeStatusFrom:to:)]) {
-        [_delegate tChatBoxView:self changeStatusFrom:fromStatus to:[self status]];
-    }
+//    ChatBoxStatus fromStatus = [self status];
+//
+//    [self setStatus:ChatBoxShowKeyboard];
+//
+//    if (_delegate && [_delegate respondsToSelector:@selector(tChatBoxView:changeStatusFrom:to:)]) {
+//        [_delegate tChatBoxView:self changeStatusFrom:fromStatus to:[self status]];
+//    }
+    NSLog(@"%@", [textView text]);
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView {
+    NSLog(@"%@", [textView text]);
 }
 
 #pragma mark - Methods
@@ -109,39 +106,34 @@
 - (UITextView *) textView {
     if (_textView == nil) {
         _textView = [[UITextView alloc] initWithFrame:CGRectMake(CGRectGetMaxX([[self voiceButton] frame]) + kTextViewMarginLeft, kChatBoxInsetTop, kTextViewWidth, kTextViewHeight)];
-        [_textView setBackgroundColor:[UIColor colorWithHexString:@"#f2f2f2"]];
-        [_textView setTextColor:[UIColor colorWithHexString:@"#333333"]];
+        [_textView setText:@"输入新消息"];
+        [_textView setTextColor:[UIColor colorWithHexString:@"#999999"]];
+        [_textView setBackgroundColor:[UIColor colorWithHexString:@"#f5f5f5"]];
         [_textView setTextAlignment:NSTextAlignmentLeft];
         [_textView setReturnKeyType:UIReturnKeySend];
-        [_textView setScrollEnabled:NO];
+        [_textView setTextContainerInset:UIEdgeInsetsMake(kTextViewInsetTop, kTextViewInsetLeft, kTextViewInsetBottom, kTextViewInsetRight)];
         [_textView setFont:[UIFont systemFontOfSize:16.f]];
-        [_textView setTextContainerInset:UIEdgeInsetsMake(kTextViewHeight * 0.3, kTextViewWidth * 0.03, 0, kTextViewWidth * 0.03)];
-        [_textView.layer setBorderWidth:1.f];
-        [_textView.layer setBorderColor:[[UIColor colorWithHexString:@"#f2f2f2"] CGColor]];
-        [_textView.layer setCornerRadius:20.f];
+        [_textView.layer setCornerRadius:22.f];
         [_textView setDelegate:self];
     }
     return _textView;
 }
 
-- (TButton *) imageButton {
-    if (_imageButton == nil) {
-        _imageButton = [[TButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX([[self textView] frame]) + kImageButtonMarginLeft, kChatBoxInsetTop + kToolButtonMarginTVTop, kToolButtonWidth, kToolButtonHeight)];
-        [_imageButton setImage:[UIImage imageNamed:@"tCImage"] forState:UIControlStateNormal];
-//        [_imageButton setBackgroundColor:[UIColor grayColor]];
-        [[_imageButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
-    }
-    return _imageButton;
-}
-
 - (UIButton *) faceButton {
     if (_faceButton == nil) {
-        _faceButton = [[UIButton alloc] initWithFrame:CGRectMake(kToolBarPaddingLeft + 2 * kToolBarItemMarginLeft, kToolBarPaddingTop, kToolBarItemSize, kToolBarItemSize)];
+        _faceButton = [[TButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX([[self textView] frame]) - kFaceButtonMarginRight - kToolButtonWidth, kChatBoxInsetTop + kToolButtonMarginTVTop, kToolButtonWidth, kToolButtonHeight)];
         [_faceButton setImage:[UIImage imageNamed:@"tCFace"] forState:UIControlStateNormal];
         [_faceButton addTarget:self action:@selector(faceButtonTouch) forControlEvents:UIControlEventTouchUpInside];
     }
     return _faceButton;
 }
 
+- (TButton *) imageButton {
+    if (_imageButton == nil) {
+        _imageButton = [[TButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX([[self textView] frame]) + kImageButtonMarginLeft, kChatBoxInsetTop + kToolButtonMarginTVTop, kToolButtonWidth, kToolButtonHeight)];
+        [_imageButton setImage:[UIImage imageNamed:@"tCImage"] forState:UIControlStateNormal];
+    }
+    return _imageButton;
+}
 
 @end

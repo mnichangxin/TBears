@@ -47,7 +47,7 @@
 
 - (TChatMessageViewController *) tCMessageVC {
     if (_tCMessageVC == nil) {
-        _tCMessageVC = [TChatMessageViewController new];
+        _tCMessageVC = [[TChatMessageViewController alloc] init];
         [[_tCMessageVC view] setFrame:CGRectMake(0, kSafeAreaTopHeight, kScreenWidth, kScreenHeight - kSafeAreaTopHeight)];
         [_tCMessageVC setDelegate:self];
     }
@@ -56,7 +56,7 @@
 
 - (TChatBoxViewController *) tCBoxVC {
     if (_tCBoxVC == nil) {
-        _tCBoxVC = [TChatBoxViewController new];
+        _tCBoxVC = [[TChatBoxViewController alloc] init];
         [[_tCBoxVC view] setFrame:CGRectMake(0, kScreenHeight - (kChatBoxHeight + kSafeAreaBottomHeight), kScreenWidth, kScreenHeight)];
         [[_tCBoxVC view] setBackgroundColor:[UIColor colorWithHexString:@"#ffffff"]];
         [_tCBoxVC setDelegate:self];
