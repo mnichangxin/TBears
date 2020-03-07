@@ -3,9 +3,9 @@
 typedef NS_ENUM(NSInteger, ChatBoxStatus) {
     ChatBoxNotingStatus, // 无状态
     ChatBoxShowKeyboard, // 键盘
-    ChatBoxShowFaceStatus, // 表情
-    ChatBoxShowImageStatus, // 图片
     ChatBoxShowVoiceStatus, // 声音
+    ChatBoxShowFaceStatus, // 表情
+    ChatBoxShowImageStatus // 图片
 };
 
 @class TChatBoxView;

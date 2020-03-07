@@ -1,5 +1,6 @@
 #import "TChatBoxView.h"
 #import "TButton.h"
+#import "TTextView.h"
 #import "UIColor+Hex.h"
 
 #define kChatBoxInsetTop          kScreenHeight * (36.f / 1920)
@@ -19,13 +20,14 @@
 
 @interface TChatBoxView ()<UITextViewDelegate>
 
+@property (nonatomic, assign) ChatBoxStatus status;
+
 @property (nonatomic, strong) UIView *topLine;
-@property (nonatomic, strong) UITextView *textView;
+@property (nonatomic, strong) TTextView *textView;
 @property (nonatomic, strong) TButton *imageButton;
 @property (nonatomic, strong) TButton *voiceButton;
 @property (nonatomic, strong) TButton *faceButton;
-@property (nonatomic, strong) TButton *moreButton;
-@property (nonatomic, assign) ChatBoxStatus status;
+@property (nonatomic, strong) TButton *talkButton;
 
 @end
 
@@ -34,13 +36,14 @@
 - (instancetype) initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        [self setStatus:ChatBoxNotingStatus];
         [self setBackgroundColor:[UIColor colorWithHexString:@"#ffffff"]];
         [self addSubview:[self topLine]];
         [self addSubview:[self voiceButton]];
         [self addSubview:[self textView]];
         [self addSubview:[self faceButton]];
         [self addSubview:[self imageButton]];
-        [self setStatus:ChatBoxNotingStatus];
+        [self addSubview:[self talkButton]];
     }
     return self;
 }
@@ -53,21 +56,38 @@
 #pragma mark - UITextViewDelegate
 
 - (void) textViewDidBeginEditing:(UITextView *)textView {
-//    ChatBoxStatus fromStatus = [self status];
-//
-//    [self setStatus:ChatBoxShowKeyboard];
-//
-//    if (_delegate && [_delegate respondsToSelector:@selector(tChatBoxView:changeStatusFrom:to:)]) {
-//        [_delegate tChatBoxView:self changeStatusFrom:fromStatus to:[self status]];
-//    }
-    NSLog(@"%@", [textView text]);
+    ChatBoxStatus fromStatus = [self status];
+
+    [self setStatus:ChatBoxShowKeyboard];
+
+    if (_delegate && [_delegate respondsToSelector:@selector(tChatBoxView:changeStatusFrom:to:)]) {
+        [_delegate tChatBoxView:self changeStatusFrom:fromStatus to:[self status]];
+    }
 }
 
-- (void)textViewDidEndEditing:(UITextView *)textView {
-    NSLog(@"%@", [textView text]);
+- (BOOL) textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    return YES;
 }
 
 #pragma mark - Methods
+
+- (void) voiceButtonTouch {
+    ChatBoxStatus fromStatus = [self status];
+    
+    [[self voiceButton] setImage:nil forState:UIControlStateNormal];
+    
+    if (fromStatus != ChatBoxShowVoiceStatus) {
+        [self setStatus:ChatBoxShowVoiceStatus];
+        [[self voiceButton] setBackgroundImage:[UIImage imageNamed:@"tCKeyboard"] forState:UIControlStateNormal];
+        [[self textView] setHidden:YES];
+        [[self talkButton] setHidden:NO];
+    } else {
+        [self setStatus:ChatBoxNotingStatus];
+        [[self voiceButton] setBackgroundImage:[UIImage imageNamed:@"tCVoice"] forState:UIControlStateNormal];
+        [[self textView] setHidden:NO];
+        [[self talkButton] setHidden:YES];
+    }
+}
 
 - (void) faceButtonTouch {
     ChatBoxStatus fromStatus = [self status];
@@ -99,14 +119,15 @@
     if (_voiceButton == nil) {
         _voiceButton = [[TButton alloc] initWithFrame:CGRectMake(KVoiceButtonMarginLeft, kChatBoxInsetTop + kToolButtonMarginTVTop, kToolButtonWidth, kToolButtonHeight)];
         [_voiceButton setImage:[UIImage imageNamed:@"tCVoice"] forState:UIControlStateNormal];
+        [_voiceButton addTarget:self action:@selector(voiceButtonTouch) forControlEvents:UIControlEventTouchUpInside];
     }
     return _voiceButton;
 }
 
 - (UITextView *) textView {
     if (_textView == nil) {
-        _textView = [[UITextView alloc] initWithFrame:CGRectMake(CGRectGetMaxX([[self voiceButton] frame]) + kTextViewMarginLeft, kChatBoxInsetTop, kTextViewWidth, kTextViewHeight)];
-        [_textView setText:@"输入新消息"];
+        _textView = [[TTextView alloc] initWithFrame:CGRectMake(CGRectGetMaxX([[self voiceButton] frame]) + kTextViewMarginLeft, kChatBoxInsetTop, kTextViewWidth, kTextViewHeight)];
+        [_textView setPlaceholder:@"输入新消息"];
         [_textView setTextColor:[UIColor colorWithHexString:@"#999999"]];
         [_textView setBackgroundColor:[UIColor colorWithHexString:@"#f5f5f5"]];
         [_textView setTextAlignment:NSTextAlignmentLeft];
@@ -134,6 +155,19 @@
         [_imageButton setImage:[UIImage imageNamed:@"tCImage"] forState:UIControlStateNormal];
     }
     return _imageButton;
+}
+
+- (TButton *) talkButton {
+    if (_talkButton == nil) {
+        _talkButton = [[TButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX([[self voiceButton] frame]) + kTextViewMarginLeft, kChatBoxInsetTop, kTextViewWidth, kTextViewHeight)];
+        [_talkButton setTitle:@"按住说话" forState:UIControlStateNormal];
+        [_talkButton setTitleColor:[UIColor colorWithHexString:@"#333333"] forState:UIControlStateNormal];
+        [[_talkButton titleLabel] setFont:[UIFont systemFontOfSize:16.f]];
+        [[_talkButton layer] setCornerRadius:22.f];
+        [[_talkButton layer] setBackgroundColor:[[UIColor colorWithHexString:@"#f5f5f5"] CGColor]];
+        [_talkButton setHidden:YES];
+    }
+    return _talkButton;
 }
 
 @end
