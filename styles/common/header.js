@@ -1,10 +1,13 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Platform } from 'react-native'
 import { scaleSize, scaleFont } from '@utils/scaleUtil'
 import { ifIphoneX } from '@utils/screenUtil'
 
 export default StyleSheet.create({
     headerContainer: {
-        paddingTop: ifIphoneX(44, 30)
+        paddingTop: Platform.select({
+            ios: ifIphoneX(44, 20),
+            android: 20
+        })
     },
     header: {
         flexDirection: 'row',
