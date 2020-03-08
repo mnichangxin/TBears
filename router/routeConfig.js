@@ -49,6 +49,6 @@ export default {
         screen:EditInfo
     },
     Mine:{
-        screen:EditInfo
+        screen:MainTabScreen
     }
 }

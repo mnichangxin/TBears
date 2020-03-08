@@ -18,14 +18,13 @@ export default StyleSheet.create({
     },
     qrItem:{
         display:'flex',
-        flexDirection:'row'
+        flexDirection:'row',
+        alignItems:'center'
     },
     scanIcon:{
         width:scaleSize(50),
         height:scaleSize(50),
-        marginRight:scaleSize(34),
-        backgroundColor:'red',
-        marginTop:scaleSize(48)
+        marginRight:scaleSize(24)
     },
     scanText:{
         fontSize:scaleFont(48),
@@ -38,10 +37,8 @@ export default StyleSheet.create({
         lineHeight:scaleSize(150)
     },
     arrowIcon:{
-        width:scaleSize(30),
-        height:scaleSize(30),
-        backgroundColor:'red',
-        marginTop:scaleSize(60),
+        width:scaleSize(50),
+        height:scaleSize(50),
         marginLeft:scaleSize(6)
     },
     qrCodeWrapper:{

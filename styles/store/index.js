@@ -3,22 +3,29 @@ import { scaleSize, scaleFont } from '@utils/scaleUtil'
 
 export default StyleSheet.create({
     storeWrap:{
-
+        
     },
     storeCountWrap:{
         display:'flex',
         flexDirection:'row',
         justifyContent:'center',
-        marginTop:scaleSize(54),
-        marginBottom:scaleSize(184)
+        marginBottom:scaleSize(25),
+        marginTop:scaleSize(54)
     },
     storeCountBox:{
-        width:'100%'
+        width:scaleSize(970),
+        borderRadius:scaleSize(20),
+        backgroundColor:"#fff",
+        paddingTop:scaleSize(54)
     },
     storeCountNum:{
         display:'flex',
         flexDirection:'row',
-        justifyContent:'center'
+        justifyContent:'center',
+        borderBottomWidth:1,
+        borderStyle:'solid',
+        paddingBottom:scaleSize(60),
+        borderColor:'#f2f2f2'
     },
     storeCountItem:{
         flex:1,
@@ -72,15 +79,44 @@ export default StyleSheet.create({
     storeCountBtnBox:{
         display:'flex',
         flexDirection:'row',
-        borderTopColor:'#f2f2f2',
-        borderTopWidth:scaleSize(1),
-        borderStyle:'solid'
+        height:scaleSize(140),
+        alignItems:'center'
     },
     storeCountBtnItem:{
         flex:1,
         textAlign:'center',
-        paddingTop:scaleSize(60),
         color: '#7063E3',
-        fontSize:scaleFont(42)  
+        fontSize:scaleFont(42)
+    },
+    storeList:{
+        height:scaleSize(330),
+        marginLeft:scaleSize(60),
+        marginRight:scaleSize(60),
+        display:'flex',
+        flexDirection:'row',
+        justifyContent:'space-around',
+        backgroundColor:'#fff',
+        alignItems:'center',
+        borderRadius:scaleSize(20)
+    },
+    storeIconBg:{
+        width:scaleSize(150),
+        height:scaleSize(150),
+        backgroundColor:'#f1f1f1',
+        borderRadius:scaleSize(75),
+        display:'flex',
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center'
+    },
+    storeIcon:{
+        width:scaleSize(90),
+        height:scaleSize(90)
+    },
+    storeText:{
+        textAlign:'center',
+        fontSize: scaleFont(42),
+        color:'#333',
+        marginTop:scaleSize(12)
     }
 })

@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
-import { View,Text } from 'react-native'
+import { View,Text,Image } from 'react-native'
 import Header from '@views/common/header'
 import styles from '@styles/store'
+
+const storeDone = require('../../assets/mine/undone-icon.png')
+const storeUnDone = require('../../assets/mine/undone-icon.png')
 
 export default class Store extends Component {
     state = {
@@ -39,6 +42,16 @@ export default class Store extends Component {
                             <Text style={styles.storeCountBtnItem}>充值</Text>
                             <Text style={styles.storeCountBtnItem}>体现</Text>
                         </View>
+                    </View>
+                </View>
+                <View style={styles.storeList}>
+                    <View style={styles.storeItem}>
+                        <View style={styles.storeIconBg}><Image style={styles.storeIcon} source={storeDone}></Image></View>
+                        <Text style={styles.storeText}>已完成</Text>
+                    </View>
+                    <View style={styles.storeItem}>
+                        <View style={styles.storeIconBg}><Image style={styles.storeIcon} source={storeDone}></Image></View>
+                        <Text style={styles.storeText}>未完成</Text>
                     </View>
                 </View>
                 <View style={styles.storeTipsWrap}>

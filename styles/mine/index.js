@@ -90,6 +90,7 @@ export default StyleSheet.create({
     },
     hobbyWrapper:{
         display:'flex',
+        flexDirection:'row',
         justifyContent:'center'
     },
     hobbyInner:{
@@ -121,17 +122,21 @@ export default StyleSheet.create({
         marginTop:scaleSize(50),
         paddingLeft:scaleSize(80),
         paddingRight:scaleSize(80),
-        display:'flex',
-        flexDirection:'row',
-        flexWrap:'wrap'
+        position:'relative'
     },
     locationIcon:{
-        width:scaleSize(42),
-        height:scaleSize(42)
+        width:scaleSize(22),
+        height:scaleSize(32),
+        position:'absolute',
+        left:scaleSize(80),
+        top:1
     },
     location:{
         fontSize:scaleFont(34),
-        color:'#fff'
+        color:'#fff',
+        position:'absolute',
+        left:scaleSize(100),
+        top:1
     },
     profileText:{
         fontSize:scaleFont(36),
@@ -142,7 +147,9 @@ export default StyleSheet.create({
         height:scaleSize(76),
         display:'flex',
         flexDirection:'row',
-        justifyContent:'center'
+        justifyContent:'space-between',
+        paddingLeft:scaleSize(40),
+        paddingRight:scaleSize(40)
     },
     operationBtn:{
         width:scaleSize(243),

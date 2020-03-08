@@ -63,5 +63,19 @@ export default StyleSheet.create({
         height:scaleSize(380),
         backgroundColor:'red',
         borderRadius:scaleSize(10)
+    },
+    disbindBtn:{
+        width:scaleSize(970),
+        height:scaleSize(90),
+        borderRadius:scaleSize(45),
+        backgroundColor:'#564F5F',
+        marginTop:scaleSize(54)
+    },
+    disbindBtnText:{
+        lineHeight:scaleSize(90),
+        textAlign:'center',
+        fontSize:scaleFont(36),
+        color:'#fff',
+        fontWeight:'bold'
     }
 })

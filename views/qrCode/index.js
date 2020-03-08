@@ -5,7 +5,7 @@ import styles from '@styles/qrCode'
 
 const imgUrl = {
     scanIcon: require('../../assets/mine/QR-icon.png'),
-    arrowIcon: require('../../assets/mine/QR-icon.png'),
+    arrowIcon: require('../../assets/mine/arrow_right.png'),
     qrCodeBg:require('../../assets/mine/QR-code-bg.png'),
     avatar: require('../../assets/mine/avatar.jpeg'),
     downloadIcon:require('../../assets/mine/download-icon.png'),
@@ -16,12 +16,12 @@ export default () => (
         <Header title="我的二维码" left={null} />
         <View style={styles.qrItemBox} >
             <View style={styles.qrItem}>
-                <Image suorce={imgUrl.scanIcon} style={styles.scanIcon}/>
+                <Image source={imgUrl.scanIcon} style={styles.scanIcon}></Image>
                 <Text style={styles.scanText}>扫一扫</Text>
             </View>
             <View style={styles.qrItem}>
                 <Text style={styles.arrowText}>探熊加我好友</Text>
-                <Image suorce={imgUrl.arrowIcon} style={styles.arrowIcon}/>
+                <Image source={imgUrl.arrowIcon} style={styles.arrowIcon}></Image>
             </View>
         </View>
         <View style={styles.qrCodeWrapper}>
