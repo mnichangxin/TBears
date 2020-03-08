@@ -3,7 +3,7 @@
 #import "TTextView.h"
 #import "UIColor+Hex.h"
 
-#define kChatBoxInsetTop          kScreenHeight * (36.f / 1920)
+#define kChatBoxInsetTop          kScreenHeight * (18.f / 1920)
 #define KVoiceButtonMarginLeft    kScreenWidth * (60.f / 1080)
 #define kToolButtonWidth          kScreenWidth * (62.f / 1080)
 #define kToolButtonHeight         kToolButtonWidth
