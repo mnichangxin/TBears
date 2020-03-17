@@ -79,7 +79,7 @@ export default props => {
         const RNBridge = NativeModules.RNBridge
         RNBridge.jumpNativePage({
             name: 'chat',
-            params: null
+            params: {}
         })
     }
 

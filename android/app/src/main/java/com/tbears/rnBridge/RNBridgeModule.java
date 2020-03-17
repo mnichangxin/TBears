@@ -7,6 +7,7 @@ import android.util.Log;
 import com.facebook.react.bridge.JSApplicationIllegalArgumentException;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
+import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
 
 public class RNBridgeModule extends ReactContextBaseJavaModule {
@@ -19,19 +20,19 @@ public class RNBridgeModule extends ReactContextBaseJavaModule {
         return "RNBridge";
     }
 
+    @ReactMethod
     public void jumpNativePage(ReadableMap params) {
         try {
             Activity currentActivity = getCurrentActivity();
 
-            if (currentActivity != null) {
-                String toActivityName = params.getString("name");
-                ReadableMap toActivityParams = params.getMap("params");
+            String toActivityName = params.getString("name");
+            ReadableMap toActivityParams = params.getMap("params");
 
-                Log.d("rnBridge", toActivityName);
+            Class toActivity = Class.forName(toActivityName);
 
-                Class toActivity = Class.forName(toActivityName);
+            if (currentActivity != null && toActivity != null) {
                 Intent intent = new Intent(currentActivity, toActivity);
-                intent.putExtra("params", params.toString());
+                intent.putExtra("params", toActivityParams.toHashMap().toString());
                 currentActivity.startActivity(intent);
             }
         } catch (Exception e) {
